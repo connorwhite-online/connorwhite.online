@@ -3,3 +3,12 @@
     height: auto;
     margin: none;
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    vertical-align: baseline;
+    height: 100vh;
+    width: 100vw;
+}
