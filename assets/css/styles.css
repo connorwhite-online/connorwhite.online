@@ -1,5 +1,7 @@
 * {
     margin: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 nav {
@@ -13,7 +15,16 @@ nav {
     width: 100vw;
 }
 
+a {
+    font-family: "Gulax Regular";
+    font-size: 4vw;
+}
+
+.nav-back {
+    padding-top: 10px;
+}
+
 @font-face {
     font-family: "Gulax Regular";
-    src: url(""); 
+    src: url(../fonts/Gulax-Regular.woff2); 
 }
