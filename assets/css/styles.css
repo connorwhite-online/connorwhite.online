@@ -4,20 +4,23 @@
     overflow-x: hidden;
 }
 
+body {
+    background-image: linear-gradient(45deg, rgb(74, 101, 255), rgb(211, 158, 255));
+}
+
 nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
-    vertical-align: baseline;
     height: 100vh;
     width: 100vw;
+    margin-left: 20px;
 }
 
 a {
     font-family: "Gulax Regular";
     font-size: 4vw;
+    color: rgb(240, 231, 222);
 }
 
 .nav-back {
