@@ -13,14 +13,20 @@ nav {
     flex-direction: column;
     justify-content: flex-end;
     height: 100vh;
-    width: 100vw;
+    width: auto;
     margin-left: 20px;
 }
 
 a {
     font-family: "Gulax Regular";
-    font-size: 4vw;
+    font-size: 8vw;
     color: rgb(240, 231, 222);
+    opacity: 50%;
+}
+
+a:hover {
+    opacity: 100%;
+    cursor: pointer;
 }
 
 .nav-back {
@@ -30,4 +36,11 @@ a {
 @font-face {
     font-family: "Gulax Regular";
     src: url(../fonts/Gulax-Regular.woff2); 
+}
+
+@media only screen and (min-width: 720px) {
+
+    a {
+        font-size: 4vw;
+    }
 }
