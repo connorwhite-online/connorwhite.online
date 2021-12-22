@@ -28,6 +28,10 @@ div.textbox {
     height: 25vh;
 }
 
+.project-title {
+    font-size: 4vw;
+}
+
 a {
     font-family: "Gulax Regular";
     font-size: 8vw;
