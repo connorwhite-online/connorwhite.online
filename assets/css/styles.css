@@ -17,6 +17,17 @@ nav {
     margin-left: 20px;
 }
 
+div.container {
+    height: 100vh;
+    width: auto;
+}
+
+div.textbox {
+    display: flex;
+    justify-content: baseline;
+    height: 25vh;
+}
+
 a {
     font-family: "Gulax Regular";
     font-size: 8vw;
@@ -41,6 +52,6 @@ a:hover {
 @media only screen and (min-width: 720px) {
 
     a {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 }
