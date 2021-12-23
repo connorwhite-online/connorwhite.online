@@ -1,6 +1,5 @@
 * {
     margin: none;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -24,7 +23,7 @@ div.container {
 
 div.textbox {
     display: flex;
-    justify-content: baseline;
+    justify-content: flex-end;
     height: 25vh;
 }
 
