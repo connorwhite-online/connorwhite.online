@@ -19,11 +19,15 @@ nav {
 div.container {
     height: 100vh;
     width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 div.textbox {
+    background-color: rgba(255,255,255,0.5);
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     height: 25vh;
 }
 
@@ -40,6 +44,8 @@ a {
 
 a:hover {
     opacity: 100%;
+    text-shadow: 4px 4px rgb(78, 78, 78);
+    transition: text-shadow, 1s, ease;
     cursor: pointer;
 }
 
