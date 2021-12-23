@@ -45,7 +45,7 @@ a {
 a:hover {
     opacity: 100%;
     text-shadow: 4px 4px rgb(78, 78, 78);
-    transition: text-shadow, 1s, ease;
+    transition: text-shadow 1s ease;
     cursor: pointer;
 }
 
@@ -56,6 +56,16 @@ a:hover {
 @font-face {
     font-family: "Gulax Regular";
     src: url(../fonts/Gulax-Regular.woff2); 
+}
+
+@font-face {
+    font-family: "Karrik Regular";
+    src: url(../fonts/Karrik-Regular.woff2);
+}
+
+@font-face {
+    font-family: "Karrik Italic";
+    src: url(../fonts/Karrik-Italic.woff2);
 }
 
 @media only screen and (min-width: 720px) {
