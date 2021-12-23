@@ -108,11 +108,10 @@ div.textbox {
     .project-title {
         font-size: 8vw;
         width: 50vw;
-        order: 1;
     }
     .project-brief {
-        font-size: 3vw;
+        font-size: 2.5vw;
         width: 50vw;
-        order: 2;
+        line-height: 1.5;
     }
 }
