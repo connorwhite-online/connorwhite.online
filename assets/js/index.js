@@ -16,3 +16,9 @@
 // // Trigger filtered scroll on scroll event
 // document.addEventListener("scroll", autoScroll);
 
+anime({
+    targets: '.project-title',
+    translateX: 250,
+    dirction: 'reverse',
+    duration: 3000
+});
