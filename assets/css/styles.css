@@ -38,10 +38,10 @@ a:hover {
     text-shadow: 4px 4px rgb(78, 78, 78);
     transition: text-shadow 1s ease;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(255, 255, 255, 0.25);
     border-radius: 5px;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 5px; */
 }
 
 div.container {
@@ -58,6 +58,7 @@ div.textbox {
     display: flex;
     flex-direction: column;
     width: 90vw;
+    height: auto;
     
 }
 

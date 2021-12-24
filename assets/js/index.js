@@ -16,25 +16,38 @@
 // // Trigger filtered scroll on scroll event
 // document.addEventListener("scroll", autoScroll);
 
-// anime({
-//     targets: '.project-title',
-//     translateY: [-250, 0],
-//     dirction: 'reverse',
-//     duration: '3000'
-// });
+anime({
+    targets: '#work',
+    translateX: [-250, 0],
+    duration: '1250'
+});
+
+anime({
+    targets: '#about',
+    translateX: [-250, 0],
+    duration: '1500'
+});
+
+anime({
+    targets: '#contact',
+    translateX: [-250, 0],
+    duration: '1750'
+});
 
 // anime({
-//     targets: '.project-brief',
+//     targets: '.text-box',
 //     translateY: [250, 0],
-//     duration: '3000'
+//     duration: '2000'
 // });
+
 anime({
     targets: '.project-title',
     translateY: [225, 0],
     duration: '2000'
 });
+
 anime({
     targets: '.project-brief',
     translateY: [250, 0],
-    duration: '1750'
+    duration: '1500'
 });
