@@ -16,9 +16,20 @@
 // // Trigger filtered scroll on scroll event
 // document.addEventListener("scroll", autoScroll);
 
+// anime({
+//     targets: '.project-title',
+//     translateY: [-250, 0],
+//     dirction: 'reverse',
+//     duration: '3000'
+// });
+
+// anime({
+//     targets: '.project-brief',
+//     translateY: [250, 0],
+//     duration: '3000'
+// });
 anime({
-    targets: '.project-title',
-    translateX: 250,
-    dirction: 'reverse',
-    duration: 3000
+    targets: '.text-box',
+    translateX: [-500, 0],
+    duration: '3000'
 });
