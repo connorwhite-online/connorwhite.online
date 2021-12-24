@@ -67,12 +67,14 @@ div.container {
     font-family: "Orbitron Medium";
     font-size: 10vw;
     width: 95vw;
+    z-index: 5;
 }
 
 .project-brief {
     color: white;
-    font-family: "Fengardo Neue Regular";
+    font-family: "Space Mono", sans-serif;
     font-size: 4vw;
+    z-index: 4;
 }
 
 /* @font-face {
@@ -86,13 +88,8 @@ div.container {
 }
 
 @font-face {
-    font-family: "Karrik Regular";
-    src: url(../fonts/Karrik-Regular.woff2);
-}
-
-@font-face {
-    font-family: "Karrik Italic";
-    src: url(../fonts/Karrik-Italic.woff2);
+    font-family: "Young Serif Regular";
+    src: url(../fonts/YoungSerif-Regular.woff2);
 }
 
 @font-face {
