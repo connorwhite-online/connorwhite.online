@@ -23,7 +23,7 @@ body {
 }
 
 a {
-    font-family: "Gulax Regular";
+    font-family: "Orbitron Medium";
     font-size: 8vw;
     color: rgb(240, 231, 222);
     opacity: 50%;
@@ -64,7 +64,7 @@ div.textbox {
 
 .project-title {
     color: white;
-    font-family: "Gulax Regular";
+    font-family: "Orbitron Medium";
     font-size: 10vw;
     width: 90vw;
 }
@@ -75,9 +75,14 @@ div.textbox {
     font-size: 4vw;
 }
 
-@font-face {
+/* @font-face {
     font-family: "Gulax Regular";
     src: url(../fonts/Gulax-Regular.woff2); 
+} */
+
+@font-face {
+    font-family: "Orbitron Medium";
+    src: url(../fonts/orbitron-medium-webfont.woff);
 }
 
 @font-face {
