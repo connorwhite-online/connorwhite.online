@@ -29,7 +29,12 @@
 //     duration: '3000'
 // });
 anime({
-    targets: '.text-box',
-    translateX: [-500, 0],
-    duration: '3000'
+    targets: '.project-title',
+    translateY: [225, 0],
+    duration: '2000'
+});
+anime({
+    targets: '.project-brief',
+    translateY: [250, 0],
+    duration: '1750'
 });
