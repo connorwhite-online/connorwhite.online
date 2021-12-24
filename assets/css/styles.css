@@ -45,7 +45,7 @@ a:hover {
 }
 
 div.container {
-    height: 95vh;
+    height: 100vh;
     width: auto;
     padding: 20px;
     display: flex;
@@ -53,20 +53,20 @@ div.container {
     justify-content: flex-end;
 }
 
-div.textbox {
+/* div.textbox {
     background-color: rgba(255,255,255,0.5);
     display: flex;
     flex-direction: column;
     width: 90vw;
     height: auto;
     
-}
+} */
 
 .project-title {
     color: white;
     font-family: "Orbitron Medium";
     font-size: 10vw;
-    width: 90vw;
+    width: 95vw;
 }
 
 .project-brief {
@@ -102,7 +102,7 @@ div.textbox {
 
 @media only screen and (min-width: 720px) {
 
-    .text-box {
+    .container {
         display: flex;
         flex-direction: row;
     }
@@ -112,12 +112,14 @@ div.textbox {
     }
 
     .project-title {
-        font-size: 8vw;
-        width: 50vw;
+        order: 1;
+        font-size: 6vw;
+        width: 42.5vw;
     }
     .project-brief {
+        order: 2;
         font-size: 2.5vw;
-        width: 50vw;
+        width: 42.5vw;
         line-height: 1.5;
     }
 }
