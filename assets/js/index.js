@@ -19,19 +19,19 @@
 anime({
     targets: '#work',
     translateX: [-250, 0],
-    duration: '1250'
+    duration: '1500'
 });
 
 anime({
     targets: '#about',
     translateX: [-250, 0],
-    duration: '1500'
+    duration: '1750'
 });
 
 anime({
     targets: '#contact',
     translateX: [-250, 0],
-    duration: '1750'
+    duration: '2000'
 });
 
 // anime({
@@ -42,12 +42,12 @@ anime({
 
 anime({
     targets: '.project-title',
-    translateY: [225, 0],
+    translateY: [125, 0],
     duration: '2000'
 });
 
 anime({
     targets: '.project-brief',
-    translateY: [250, 0],
-    duration: '1500'
+    translateY: [125, 0],
+    duration: '1750'
 });
