@@ -1,20 +1,4 @@
-// // Establish current scroll position
-// var currentScroll = window.scrollY
-
-// // Distinguish between scroll up and scroll down
-// var autoScroll = function() {
-
-//     if (window.pageYOffset >= currentScroll) {
-
-//         window.scrollBy(0, -window.innerHeight);
-//     }
-//     else {
-//         window.scrollBy(0, window.innerHeight);
-//     }
-// };
-
-// // Trigger filtered scroll on scroll event
-// document.addEventListener("scroll", autoScroll);
+window.addEventListener('scroll', console.log(scrollY));
 
 anime({
     targets: '#work',
@@ -34,11 +18,11 @@ anime({
     duration: '2000'
 });
 
-// anime({
-//     targets: '.text-box',
-//     translateY: [250, 0],
-//     duration: '2000'
-// });
+anime ({
+    targets: '.project-img',
+    scale: [0.5, 1],
+    duration: '3000'
+});
 
 anime({
     targets: '.project-title',
