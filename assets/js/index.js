@@ -19,7 +19,13 @@ anime({
 });
 
 anime ({
-    targets: 'img',
+    targets: '.hero',
+    translateY: [125, 0],
+    duration: '2000'
+});
+
+anime ({
+    targets: '',
     scale: [0.5, 1],
     duration: '3000'
 });
