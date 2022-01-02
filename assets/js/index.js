@@ -41,3 +41,16 @@ anime({
     translateY: [125, 0],
     duration: '1750'
 });
+
+const projectTitles = document.getElementsByClassName(".project-title");
+
+const projectTitleHover = projectTitles.addEventListener('click', linkArrow);
+
+const linkArrow = () => {
+    
+    const getSpan = document.querySelector("span");
+
+    getSpan.textContent = "→";
+
+    return;
+};
