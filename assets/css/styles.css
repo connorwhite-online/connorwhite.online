@@ -72,7 +72,7 @@ img{
 
 .project-brief {
     color: white;
-    font-family: "Space Mono", sans-serif;
+    font-family: "Space Mono", monospace;
     font-size: 4vw;
     z-index: 4;
 }

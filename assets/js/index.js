@@ -19,7 +19,7 @@ anime({
 });
 
 anime ({
-    targets: '.project-img',
+    targets: 'img',
     scale: [0.5, 1],
     duration: '3000'
 });
