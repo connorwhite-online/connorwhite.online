@@ -17,9 +17,14 @@ img {
     border-radius: 10px;
 }
 
-.project-title {
+h1, h2, h3, h4 {
     color: white;
     font-family: "Orbitron Medium";
+}
+
+p {
+    color: white;
+    font-family: "Space Mono", monospace;
 }
 
 .project-title:hover {
@@ -28,12 +33,11 @@ img {
     cursor: pointer;
 }
 
-.project-brief {
-    color: white;
-    font-family: "Space Mono", monospace;
-}
-
 .hero:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+
+#bio-image {
+    border-radius: 50px 15px;
 }
