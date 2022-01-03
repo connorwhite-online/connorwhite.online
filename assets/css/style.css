@@ -38,15 +38,32 @@ p {
     cursor: pointer;
 }
 
+#bio-greeting {
+    font-family: "Space Mono", monospace;
+    color: white;
+    font-size: 5vw;
+    align-self: center;
+}
+
+#skill-flash {
+    font-family: "Orbitron Medium";
+    font-size: 10vw;
+}
+
 #bio-image {
-    border-radius: 50px 15px;
+    border-radius: 100px 15px;
 }
-.carousel-caption {
-    opacity: 0;
+
+.cover-photo {
+    position: relative;
 }
-.carousel-caption:hover {
+
+.marquee {
+    position: absolute;
+    align-self: center;
     opacity: 1;
-    display: inline-flex;
+    z-index: 10;
+    display: none;
     color: rgb(255, 101, 74) !important;
     font-size: 10vw;
     animation: marquee 8s linear infinite;
@@ -55,9 +72,9 @@ p {
 
 @keyframes marquee {
     0% {
-        transform: translate(-10%, 0);
+        transform: translate(50%, 0);
     }
     100% {
-        transform: translate(-60%, 0);
+        transform: translate(-100%, 0);
     }
 }
