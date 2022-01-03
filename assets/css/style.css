@@ -22,7 +22,18 @@ img {
     font-family: "Orbitron Medium";
 }
 
+.project-title:hover {
+    text-shadow: 4px 4px rgb(78, 78, 78);
+    transition: text-shadow 1s ease;
+    cursor: pointer;
+}
+
 .project-brief {
     color: white;
     font-family: "Space Mono", monospace;
+}
+
+.hero:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
