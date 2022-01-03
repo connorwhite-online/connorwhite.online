@@ -61,14 +61,27 @@ $("#parachute-hover").mouseleave(function(){
     $("#parachute-marquee").fadeOut();
 });
 
-const skills = ["product designer", "front-end developer", "apparel designer", "hardware designer", "car part 3D printer", "music producer", "animator"];
+const skills = [
+    "a product designer", 
+    "a front-end developer", 
+    "an apparel designer", 
+    "a hardware designer", 
+    "a car part 3D printer", 
+    "a music producer", 
+    "an animator"
+];
 
-for (i = 0, i < skills.length, i++) {
+document.getElementById('#skill-flash').innerHTML = "Get Em";
 
-    $("#skill-flash").innterHTML = "";
+// for (let i = 0; i < skills.length; i++) {
 
-    $("#skill-flash").innerHTML = skills[i];
+//     let box = $("#skill-flash").textContent
 
-    setTimeout(1500);
+//     box = skills[i];
 
-};
+//     setTimeout(1500);
+
+//     console.log(box);
+
+// };
+
