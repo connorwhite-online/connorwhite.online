@@ -71,17 +71,29 @@ const skills = [
     "an animator"
 ];
 
-document.getElementById('#skill-flash').innerHTML = "Get Em";
+const skillFlash = () => {
+    
+    var timer = 0;
 
-// for (let i = 0; i < skills.length; i++) {
+    for (let i = 0; i < skills.length; i++) {
 
-//     let box = $("#skill-flash").textContent
+        setTimeout( () => {
+            document.getElementById('.skill-flash').innerHTML = skills[i];
+        }, timer);
 
-//     box = skills[i];
+        timer = timer + 3000;
+    }
+}
 
-//     setTimeout(1500);
+skillFlash();
 
-//     console.log(box);
 
-// };
+// const skillFlash = () => {
+
+//     let count = 0;
+
+//     count++;
+// }
+
+// $("#skill-flash").text(skillFlash);
 
