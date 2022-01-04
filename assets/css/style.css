@@ -50,6 +50,10 @@ p {
     font-size: 8vw;
 }
 
+#who-am-i {
+    min-height: 225px;
+}
+
 #bio-image {
     border-radius: 100px 15px;
 }
@@ -78,3 +82,9 @@ p {
         transform: translate(-100%, 0);
     }
 }
+
+@media screen and (min-width: 720px) {
+    #skill-flash {
+        font-size: 6vw;
+    }
+  }

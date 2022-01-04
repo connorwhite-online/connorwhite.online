@@ -62,38 +62,34 @@ $("#parachute-hover").mouseleave(function(){
 });
 
 const skills = [
-    "a product designer", 
-    "a front-end developer", 
-    "an apparel designer", 
-    "a hardware designer", 
-    "a car part 3D printer", 
-    "a music producer", 
-    "an animator"
+    "product designer", 
+    "developer",
+    "crypto nerd",
+    "AR Futurist",
+    "apparel designer", 
+    "hardware designer", 
+    "car part 3D printer", 
+    "anti-capitalist",
+    "music producer",
+    "animator"
 ];
 
-const skillFlash = () => {
-    
-    var timer = 0;
+let displayIndex = 0;
+let elem = document.getElementById('skill-flash');
+let delay = 3000; // 3 second delay
 
-    for (let i = 0; i < skills.length; i++) {
-
-        setTimeout( () => {
-            document.getElementById('.skill-flash').innerHTML = skills[i];
-        }, timer);
-
-        timer = timer + 3000;
-    }
-}
-
-skillFlash();
-
-
-// const skillFlash = () => {
-
-//     let count = 0;
-
-//     count++;
-// }
-
-// $("#skill-flash").text(skillFlash);
+setInterval(() => {
+  if (elem) {
+    elem.innerHTML = skills[displayIndex];
+    console.log(skills[displayIndex]);
+  }
+  
+  // Move to the next item in dialog
+  displayIndex++;
+  
+  // If display index goes out of index range, start again
+  if (displayIndex >= skills.length) {
+    displayIndex = 0;
+  }
+}, delay);
 
