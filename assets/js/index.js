@@ -64,12 +64,10 @@ $("#parachute-hover").mouseleave(function(){
 const skills = [
     "product designer", 
     "front-end developer",
-    "crypto hodler",
     "blockchain futurist",
     "apparel designer",  
     "avid 3D printer", 
-    "audio engineer",
-    "technical illustrator"
+    "audio engineer"
 ];
 
 let displayIndex = 0;
@@ -90,4 +88,3 @@ setInterval(() => {
     displayIndex = 0;
   }
 }, delay);
-
