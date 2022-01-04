@@ -63,20 +63,18 @@ $("#parachute-hover").mouseleave(function(){
 
 const skills = [
     "product designer", 
-    "developer",
-    "crypto nerd",
-    "AR Futurist",
-    "apparel designer", 
-    "hardware designer", 
-    "car part 3D printer", 
-    "anti-capitalist",
-    "music producer",
-    "animator"
+    "front-end developer",
+    "crypto hodler",
+    "blockchain futurist",
+    "apparel designer",  
+    "avid 3D printer", 
+    "audio engineer",
+    "technical illustrator"
 ];
 
 let displayIndex = 0;
 let elem = document.getElementById('skill-flash');
-let delay = 3000; // 3 second delay
+let delay = 1500; // 1.5 second delay
 
 setInterval(() => {
   if (elem) {

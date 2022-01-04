@@ -9,16 +9,25 @@ body {
     /* background-image: linear-gradient(45deg, rgb(255, 101, 74), rgb(255, 133, 96)); */
 }
 
+#about {
+    background-color: rgb(27, 27, 27) !important;
+}
+
 @font-face {
     font-family: "Orbitron Medium";
     src: url(../fonts/orbitron-medium-webfont.woff);
+}
+
+@font-face {
+    font-family: "Gulax Regular";
+    src: url(../fonts/Gulax-Regular.woff2);
 }
 
 img {
     border-radius: 10px;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     color: white;
     font-family: "Orbitron Medium";
 }
@@ -40,18 +49,23 @@ p {
 
 #bio-greeting {
     font-family: "Space Mono", monospace;
-    color: white;
+    color: rgb(173, 243, 255);
     font-size: 4vw;
     align-self: center;
 }
 
 #skill-flash {
-    font-family: "Orbitron Medium";
-    font-size: 8vw;
+    color: rgb(173, 243, 255);
+    font-family: "Gulax Regular";
+    font-size: 20vw;
+}
+
+.main-color {
+    color: rgb(173, 243, 255);
 }
 
 #who-am-i {
-    min-height: 225px;
+    min-height: 275px;
 }
 
 #bio-image {
@@ -84,7 +98,13 @@ p {
 }
 
 @media screen and (min-width: 720px) {
-    #skill-flash {
-        font-size: 6vw;
+
+    #who-am-i {
+        min-height: 300px;
     }
+
+    #skill-flash {
+        font-size: 7vw;
+    }
+
   }
