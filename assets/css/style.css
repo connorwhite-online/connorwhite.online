@@ -29,6 +29,10 @@ body {
     src: url(../fonts/Gulax-Regular.woff2);
 }
 
+nav {
+    justify-content: space-between;
+}
+
 img {
     border-radius: 10px;
 }
@@ -47,6 +51,10 @@ p {
     color: rgb(255, 88, 88);
     transition: color 1.5s ease;
     cursor: pointer;
+}
+
+.hero {
+    z-index: 1;
 }
 
 .hero:hover {
@@ -76,6 +84,10 @@ p {
 
 #bio-image {
     border-radius: 100px 15px;
+}
+
+.top {
+    z-index: 100;
 }
 
 .cover-photo {
