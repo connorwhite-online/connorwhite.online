@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "three": "^0.136.0"
+    "three": "^0.136.0",
+    "type": "module"
   }
 }
