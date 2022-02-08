@@ -1,6 +1,19 @@
 {
   "dependencies": {
-    "three": "^0.136.0",
-    "type": "module"
-  }
+    "express": "^4.17.2",
+    "three": "^0.136.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "express",
+  "description": "My public portfolio site",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connorwhite-online/connorwhite.online.git"
+  },
+  "author": "",
+  "license": "ISC"
 }
