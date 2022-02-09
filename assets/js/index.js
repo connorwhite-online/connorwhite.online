@@ -52,6 +52,15 @@ $("#lgs-hover").mouseleave(function(){
     $("#lgs-marquee").fadeOut();
 });
 
+// Futurette hover marquee
+$("#futurette-hover").mouseover(function(){
+    $("#futurette-marquee").fadeIn();
+});
+
+$("#futurette-hover").mouseleave(function(){
+    $("#futurette-marquee").fadeOut();
+});
+
 // Parachute hover marquee
 $("#parachute-hover").mouseover(function(){
     $("#parachute-marquee").fadeIn();
