@@ -1,3 +1,9 @@
+anime ({
+    targets: 'nav',
+    opacity: [0, 1],
+    transition: '1500'
+});
+
 anime({
     targets: '#work',
     translateX: [-250, 0],
@@ -19,7 +25,13 @@ anime({
 anime ({
     targets: 'img',
     opacity: [0, 1],
-    duration: '4000'
+    duration: [750],
+    rotateZ: [5, 0],
+    scaleX: [1.25, 1],
+    scaleY: [1.25, 1],
+    easing: 'cubicBezier(.5, .005, .0005, .5)',
+    // opacity: [0, 1],
+    duration: '1000'
 });
 
 anime({

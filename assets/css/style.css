@@ -1,7 +1,5 @@
 * {
-    margin: none;
-    overflow-x: hidden;
-    border: none;
+   
 }
 
 :root {
@@ -10,10 +8,10 @@
 }
 
 body {
+    margin: none;
+    overflow-x: hidden;
+    border: none;
     background-color: var(--light-color) !important;
-    /* background-color: rgb(255, 101, 74) !important; */
-    /* background-color: rgb(255, 118, 94) !important; */
-    /* background-image: linear-gradient(45deg, rgb(255, 101, 74), rgb(255, 133, 96)); */
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +35,21 @@ body {
 
 nav {
     justify-content: space-between;
+}
+
+a, .nav-button {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-size: 4vw;
+    color: var(--dark-color);
+}
+a, .nav-button:hover {
+    color: rgb(255, 88, 88);
+    transition: color 1.5s ease;
+    cursor: pointer;
+}
+#work {
+    justify-content: end;
 }
 
 img {
@@ -112,6 +125,12 @@ p {
     overflow-x: visible;
 }
 
+.case-hero {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
 @keyframes marquee {
     0% {
         transform: translate(50%, 0);
@@ -129,6 +148,9 @@ p {
 
     #skill-flash {
         font-size: 7vw;
+    }
+    a, .nav-button {
+        font-size: 2vw;
     }
 
   }
