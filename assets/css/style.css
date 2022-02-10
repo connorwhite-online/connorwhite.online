@@ -33,10 +33,6 @@ body {
     src: url(../fonts/Gulax-Regular.woff2);
 }
 
-nav {
-    justify-content: space-between;
-}
-
 a, .nav-button {
     text-decoration: none;
     font-family: "Space Mono", monospace;
@@ -47,9 +43,6 @@ a, .nav-button:hover {
     color: rgb(255, 88, 88);
     transition: color 1.5s ease;
     cursor: pointer;
-}
-#work {
-    align-content: flex-end;
 }
 
 img {
