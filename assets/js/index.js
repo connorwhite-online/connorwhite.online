@@ -1,12 +1,20 @@
-anime ({
-    targets: 'nav',
-    opacity: [0, 1],
-    transition: '1500'
-});
+// anime({
+//     targets: '.nav-item',
+//     opacity: [0, 1],
+//     duration: '1500',
+//     // cool wrench effect
+//     // rotateZ: [5, 5, 2.5, 0],
+//     rotateZ: [15, 0],
+//     translateX: [-250, 0],
+//     duration: '1500'
+// });
 
 anime({
-    targets: '#work',
+    targets: '.nav-item',
     translateX: [-250, 0],
+    opacity: [0, 1],
+    rotateZ: [15, 0],
+    easing: 'easeInOutQuint',
     duration: '1500'
 });
 
@@ -27,11 +35,18 @@ anime ({
     opacity: [0, 1],
     duration: [750],
     rotateZ: [5, 0],
-    scaleX: [1.25, 1],
-    scaleY: [1.25, 1],
-    easing: 'cubicBezier(.5, .005, .0005, .5)',
+    scaleX: [.75, 1],
+    scaleY: [.75, 1],
+    // easing: 'cubicBezier(.5, .005, .0005, .5)',
+    easing: 'easeInOutQuint',
     // opacity: [0, 1],
     duration: '1000'
+});
+
+anime({
+    targets: '.marquee',
+    opacity: [0, 1],
+    duration: '2000'
 });
 
 anime({

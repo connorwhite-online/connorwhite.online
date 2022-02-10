@@ -49,7 +49,7 @@ a, .nav-button:hover {
     cursor: pointer;
 }
 #work {
-    justify-content: end;
+    align-content: flex-end;
 }
 
 img {
@@ -121,7 +121,7 @@ p {
     display: none;
     color: var(--light-color) !important;
     font-size: 10vw;
-    animation: marquee 8s linear infinite;
+    animation: marquee 8s ease-out infinite;
     overflow-x: visible;
 }
 
