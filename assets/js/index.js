@@ -9,6 +9,9 @@
 //     duration: '1500'
 // });
 
+
+// navigation animation
+
 anime({
     targets: '.nav-item',
     translateX: [-250, 0],
@@ -16,12 +19,6 @@ anime({
     rotateZ: [15, 0],
     easing: 'easeInOutQuint',
     duration: '1500'
-});
-
-anime({
-    targets: '#about',
-    translateX: [-250, 0],
-    duration: '1750'
 });
 
 anime({
@@ -60,6 +57,20 @@ anime({
     translateY: [125, 0],
     duration: '1750'
 });
+
+anime({
+    targets: '.case-title',
+    translateY: [125, 0],
+    duration: '2000'
+});
+
+anime({
+    targets: '.case-copy',
+    translateY: [125, 0],
+    duration: '1750'
+});
+
+
 
 // Multnomah Drug hover marquee
 $("#md-hover").mouseover(function(){
@@ -106,30 +117,30 @@ $("#parachute-hover").mouseleave(function(){
     $("#parachute-marquee").fadeOut();
 });
 
-const skills = [
-    "product designer", 
-    "front-end developer",
-    "blockchain futurist",
-    "apparel designer",  
-    "avid 3D printer", 
-    "audio engineer"
-];
+// const skills = [
+//     "product designer", 
+//     "front-end developer",
+//     "blockchain futurist",
+//     "apparel designer",  
+//     "avid 3D printer", 
+//     "audio engineer"
+// ];
 
-let displayIndex = 0;
-let elem = document.getElementById('skill-flash');
-let delay = 1500; // 1.5 second delay
+// let displayIndex = 0;
+// let elem = document.getElementById('skill-flash');
+// let delay = 1500; // 1.5 second delay
 
-setInterval(() => {
-  if (elem) {
-    elem.innerHTML = skills[displayIndex];
-    console.log(skills[displayIndex]);
-  }
+// setInterval(() => {
+//   if (elem) {
+//     elem.innerHTML = skills[displayIndex];
+//     console.log(skills[displayIndex]);
+//   }
   
-  // Move to the next item in dialog
-  displayIndex++;
+//   // Move to the next item in dialog
+//   displayIndex++;
   
-  // If display index goes out of index range, start again
-  if (displayIndex >= skills.length) {
-    displayIndex = 0;
-  }
-}, delay);
+//   // If display index goes out of index range, start again
+//   if (displayIndex >= skills.length) {
+//     displayIndex = 0;
+//   }
+// }, delay);
