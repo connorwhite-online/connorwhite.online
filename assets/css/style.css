@@ -29,20 +29,16 @@ body {
     src: url(../fonts/Gulax-Regular.woff2);
 }
 
+/* bootstrap overrides */
+
 h1, h2, h3, h4 {
     font-family: "Orbitron Medium";
-}
-
-a, .nav-button {
-    text-decoration: none;
-    font-family: "Space Mono", monospace;
-    font-size: 4vw;
     color: var(--dark-color);
 }
-a, .nav-button:hover {
-    color: rgb(255, 88, 88);
-    transition: color 1.5s ease;
-    cursor: pointer;
+
+p {
+    color: var(--dark-color);
+    font-family: "Space Mono", monospace;
 }
 
 img {
@@ -55,14 +51,17 @@ video {
     border-radius: 10px;
 }
 
-h2, h3 {
+a, .nav-button {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-size: 4vw;
     color: var(--dark-color);
-    font-family: "Orbitron Medium";
 }
 
-p {
-    color: var(--dark-color);
-    font-family: "Space Mono", monospace;
+a, .nav-button:hover {
+    color: rgb(255, 88, 88);
+    transition: color 1.5s ease;
+    cursor: pointer;
 }
 
 a, .title-link {
