@@ -62,8 +62,18 @@ a, .nav-button:hover {
     cursor: pointer;
 }
 
+a, .nav-button:active {
+    color: rgb(255, 88, 88);
+    cursor: pointer;
+
+}
+
 a, .title-link {
     text-decoration: none;
+}
+
+#process{
+    display: flex;
 }
 
 /* work list styling */
