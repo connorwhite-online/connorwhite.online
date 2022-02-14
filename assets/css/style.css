@@ -15,10 +15,6 @@ body {
     background: transparent;
 }
 
-#about {
-    background-color: var(--dark-color) !important;
-}
-
 @font-face {
     font-family: "Orbitron Medium";
     src: url(../fonts/orbitron-medium-webfont.woff);
@@ -29,16 +25,16 @@ body {
     src: url(../fonts/Gulax-Regular.woff2);
 }
 
-a, .nav-button {
-    text-decoration: none;
-    font-family: "Space Mono", monospace;
-    font-size: 4vw;
+/* bootstrap overrides */
+
+h1, h2, h3, h4 {
+    font-family: "Orbitron Medium";
     color: var(--dark-color);
 }
-a, .nav-button:hover {
-    color: rgb(255, 88, 88);
-    transition: color 1.5s ease;
-    cursor: pointer;
+
+p {
+    color: var(--dark-color);
+    font-family: "Space Mono", monospace;
 }
 
 img {
@@ -51,19 +47,36 @@ video {
     border-radius: 10px;
 }
 
-h2, h3 {
+/* navigation styling */
+
+a, .nav-button {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-size: 4vw;
     color: var(--dark-color);
-    font-family: "Orbitron Medium";
 }
 
-p {
-    color: var(--dark-color);
-    font-family: "Space Mono", monospace;
+a, .nav-button:hover {
+    color: rgb(255, 88, 88);
+    transition: color 1.5s ease;
+    cursor: pointer;
+}
+
+a, .nav-button:active {
+    color: rgb(255, 88, 88);
+    cursor: pointer;
+
 }
 
 a, .title-link {
     text-decoration: none;
 }
+
+#process{
+    display: flex;
+}
+
+/* work list styling */
 
 .project-title:hover {
     color: rgb(255, 88, 88);
@@ -79,7 +92,9 @@ a, .title-link {
     cursor: pointer;
 }
 
-#bio-greeting {
+/* skill flash styling */
+
+/* #bio-greeting {
     font-family: "Space Mono", monospace;
     color: var(--light-color);
     font-size: 4vw;
@@ -102,7 +117,7 @@ a, .title-link {
 
 #bio-image {
     border-radius: 100px 15px;
-}
+} */
 
 .top {
     z-index: 100;
@@ -119,6 +134,8 @@ a, .title-link {
     animation: marquee 8s ease-out infinite;
     overflow-x: visible;
 }
+
+/* case study styling */
 
 .case-hero {
     width: 100%;
@@ -142,6 +159,8 @@ a, .title-link {
     padding-bottom: 20px;
 }
 
+/* footer styling */
+
 footer {
     margin-top: 40px;
 }
@@ -156,6 +175,8 @@ footer {
     transition: color 1.5s ease;
     cursor: pointer;
 }
+
+/* animation keyframes */
 
 @keyframes marquee {
     0% {
