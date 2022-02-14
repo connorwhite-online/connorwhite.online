@@ -70,6 +70,15 @@ $("#md-hover").mouseleave(function(){
     $("#md-marquee").fadeOut();
 });
 
+// Prophet hover marquee
+$("#prophet-hover").mouseover(function(){
+    $("#prophet-marquee").fadeIn();
+});
+
+$("#prophet-hover").mouseleave(function(){
+    $("#prophet-marquee").fadeOut();
+});
+
 // LGS hover marquee
 $("#lgs-hover").mouseover(function(){
     $("#lgs-marquee").fadeIn();
