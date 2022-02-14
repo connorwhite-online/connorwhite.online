@@ -162,11 +162,20 @@ footer {
         transform: translate(50%, 0);
     }
     100% {
-        transform: translate(-100%, 0);
+        transform: translate(-50%, 0);
     }
 }
 
 @media screen and (min-width: 720px) {
+
+    @keyframes marquee {
+        0% {
+            transform: translate(50%, 0);
+        }
+        100% {
+            transform: translate(-75%, 0);
+        }
+    }
 
     #who-am-i {
         min-height: 300px;
