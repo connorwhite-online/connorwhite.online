@@ -17,7 +17,7 @@ anime({
     translateX: [-250, 0],
     opacity: [0, 1],
     rotateZ: [15, 0],
-    easing: 'easeInOutQuint',
+    easing: 'easeInOutExpo',
     duration: '1500'
 });
 
