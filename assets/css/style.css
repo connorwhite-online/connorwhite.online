@@ -25,10 +25,20 @@ body {
     src: url(../fonts/Gulax-Regular.woff2);
 }
 
+@font-face {
+    font-family: "Neue Machina Regular";
+    src: url(../fonts/PPNeueMachina-Regular.woff2);
+}
+
+@font-face {
+    font-family: "Neue World Regular";
+    src: url(../fonts/PPNeueWorld-Regular.woff2);
+}
+
 /* bootstrap overrides */
 
 h1, h2, h3, h4 {
-    font-family: "Orbitron Medium";
+    font-family: "Neue World Regular";
     color: var(--dark-color);
 }
 
@@ -78,9 +88,14 @@ a, .title-link {
 
 /* work list styling */
 
+.project-title {
+    font-size: 6vw;
+}
+
 .project-title:hover {
     color: rgb(255, 88, 88);
-    transition: color 1.5s ease;
+    letter-spacing: 2px;
+    transition: all 1.5s ease;
     cursor: pointer;
 }
 
@@ -150,7 +165,6 @@ a, .title-link {
 }
 
 .case-title {
-    font-family: 'Orbitron Medium';
     font-size: 6vw;
 }
 
