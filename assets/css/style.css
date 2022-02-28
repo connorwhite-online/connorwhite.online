@@ -164,8 +164,8 @@ a, .title-link {
     margin-bottom: 40px;
 }
 
-.case-title {
-    font-size: 6vw;
+h1.case-title {
+    font-size: 8vw;
 }
 
 .case-asset {
