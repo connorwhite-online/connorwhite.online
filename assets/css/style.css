@@ -212,6 +212,10 @@ footer {
         }
     }
 
+    .project-title {
+        font-size: 5vw;
+    }
+
     #who-am-i {
         min-height: 300px;
     }
