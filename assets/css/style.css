@@ -151,6 +151,7 @@ a, .title-link {
     opacity: 1;
     z-index: 10;
     display: none;
+    font-family: "Neue World Regular";
     color: var(--dark-color) !important;
     font-size: 10vw;
     animation: marquee 8s ease-out infinite;
