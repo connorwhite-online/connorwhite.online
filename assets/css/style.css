@@ -7,7 +7,7 @@ body {
     margin: none;
     overflow-x: hidden;
     border: none;
-    background-color: var(--light-color) !important;
+    background-color: var(--dark-color) !important;
 }
 
 ::-webkit-scrollbar {
@@ -35,16 +35,21 @@ body {
     src: url(../fonts/PPNeueWorld-Regular.woff2);
 }
 
+@font-face {
+    font-family: "Neue Montreal Regular";
+    src: url(../fonts/PPNeueMontreal-Regular.woff2);
+}
+
 /* bootstrap overrides */
 
 h1, h2, h3, h4 {
     font-family: "Neue World Regular";
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 p {
-    color: var(--dark-color);
-    font-family: "Space Mono", monospace;
+    color: var(--light-color);
+    font-family: "Neue Montreal Regular";
 }
 
 img {
@@ -61,9 +66,9 @@ video {
 
 a, .nav-button {
     text-decoration: none;
-    font-family: "Space Mono", monospace;
+    font-family: "Neue Montreal Regular";
     font-size: 4vw;
-    color: var(--dark-color);
+    color: var(--light-color);
 }
 
 a, .nav-button:hover {
@@ -89,7 +94,7 @@ a, .title-link {
 /* work list styling */
 
 .project-title {
-    color: var(--dark-color);
+    color: var(--light-color);
     font-size: 15vw;
     transition: all 1.5s ease;
 }
@@ -146,7 +151,7 @@ a, .title-link {
     opacity: 1;
     z-index: 10;
     display: none;
-    color: var(--light-color) !important;
+    color: var(--dark-color) !important;
     font-size: 10vw;
     animation: marquee 8s ease-out infinite;
     overflow-x: visible;
@@ -183,7 +188,7 @@ footer {
 
 .footer-link {
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--light-color);
     transition: color 1.5s ease;
 }
 
