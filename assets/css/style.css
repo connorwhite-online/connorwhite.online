@@ -145,7 +145,7 @@ a, .title-link {
     z-index: 100;
 }
 
-.marquee {
+p.marquee {
     position: absolute;
     align-self: center;
     opacity: 1;
