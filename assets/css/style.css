@@ -89,7 +89,9 @@ a, .title-link {
 /* work list styling */
 
 .project-title {
+    color: var(--dark-color);
     font-size: 15vw;
+    transition: all 1.5s ease;
 }
 
 .project-title:hover {
@@ -182,6 +184,7 @@ footer {
 .footer-link {
     text-decoration: none;
     color: var(--dark-color);
+    transition: color 1.5s ease;
 }
 
 .footer-link:hover {
