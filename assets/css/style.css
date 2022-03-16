@@ -156,7 +156,6 @@ p.marquee {
     font-size: 10vw;
     animation: marquee 8s ease-out infinite;
     overflow-x: visible;
-    backdrop-filter: blur(5px);
 }
 
 /* case study styling */
