@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <h1>Creative Technologist</h1>
-      <h2>I connect emerging technologies with powerful new use-cases.</h2>
+      <h2>I connect emerging technologies with powerful new use-case.</h2>
     </div>
   );
 }
