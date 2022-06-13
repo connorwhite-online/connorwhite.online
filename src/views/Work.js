@@ -1,9 +1,15 @@
 import '../App.css';
+import { Canvas } from '@react-three/fiber';
 
 function Work() {
     return (
         <div id='work'>
-            work
+            <Canvas>
+                <mesh>
+                    <planeGeometry />
+                    <meshStandardMaterial />
+                </mesh>
+            </Canvas>
         </div>
     )
 }
