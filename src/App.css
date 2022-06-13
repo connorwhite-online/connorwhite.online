@@ -1,11 +1,12 @@
 body, html, #root {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 @font-face {
-  font-family: 'Neue-Machina-Regular';
-  src: url(/src/fonts/PPNeueMachina-Regular.woff2);
+  font-family: 'Neue-Machina-Ultrabold';
+  src: url(/src/fonts/PPNeueMachina-Ultrabold.woff2);
 }
 
 #navbar {
@@ -17,8 +18,8 @@ body, html, #root {
 
 .navlink {
   text-decoration: none;
-  color: black;
-  font-family: 'Neue-Machina-Regular';
+  color: beige;
+  font-family: 'Neue-Machina-Ultrabold';
 }
 
 
