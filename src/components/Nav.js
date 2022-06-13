@@ -1,16 +1,16 @@
-import '.App.css';
-import { Routes, Route, Link, Router } from "react-router-dom";
+import '../App.css';
+import { Link } from "react-router-dom";
 
 
 function Nav () {
     return (
         <div id='navbar'>
             <div id='logo'>
-                <Link to="/">Connor White</Link>
+                <Link to="/" className='navlink'>Connor White</Link>
             </div>
             <div id='links'>
-                <Link to="/work">Work</Link>
-                <Link to="/info">Info</Link>
+                <Link to="/work" className='navlink'>Work</Link>
+                <Link to="/info" className='navlink'>Info</Link>
             </div>
         </div>
     );

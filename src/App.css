@@ -2,3 +2,23 @@ body, html, #root {
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: 'Neue-Machina-Regular';
+  src: url(/src/fonts/PPNeueMachina-Regular.woff2);
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2% 5%;
+}
+
+.navlink {
+  text-decoration: none;
+  color: black;
+  font-family: 'Neue-Machina-Regular';
+}
+
+
