@@ -7,6 +7,7 @@ function Work() {
     return (
         <div id='work'>
             <Canvas>
+                <ambientLight />
                 <mesh>
                     <planeBufferGeometry attach="geometry" args={[9, 16]} />
                     <MeshPhongMaterial attach="material" color="green" />
