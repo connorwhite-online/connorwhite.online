@@ -12,12 +12,16 @@ import Work from './views/Work';
 function App() {
   return (
     <div id='app'>
+      <div id='navigation'>
       <Nav />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/work' element={<Work />}/>
-        <Route path='/info' element={<Info />} />
-      </Routes>
+      </div>
+      <div id='meat'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/work' element={<Work />}/>
+          <Route path='/info' element={<Info />} />
+        </Routes>
+      </div>
     </div>
   );
 }
