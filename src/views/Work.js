@@ -6,7 +6,8 @@ function Work() {
         <div id='work'>
             <Canvas>
                 <mesh
-                position={[0, .7, .5]}
+                position={[0, 5, 10]}
+                rotation={[0, 1, 10]}
                 >
                     <planeGeometry/>
                     <meshStandardMaterial />
