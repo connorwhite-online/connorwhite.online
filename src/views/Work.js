@@ -5,8 +5,10 @@ function Work() {
     return (
         <div id='work'>
             <Canvas>
-                <mesh>
-                    <planeGeometry />
+                <mesh
+                position={[0, .7, .5]}
+                >
+                    <planeGeometry/>
                     <meshStandardMaterial />
                 </mesh>
             </Canvas>
