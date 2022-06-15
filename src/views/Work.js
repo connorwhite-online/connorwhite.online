@@ -6,12 +6,10 @@ function Work() {
     return (
         <div id='work'>
             <Canvas>
-                <mesh
-                geometry={planeGeometry}
-                position={[0, 5, 10]}
-                rotation={[0, 1, 10]}
-                material={[MeshStandardMaterial]}
-                />
+                <mesh>
+                    <planeBufferGeometry />
+                    <MeshStandardMaterial />
+                </mesh>
             </Canvas>
         </div>
     )
