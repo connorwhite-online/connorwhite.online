@@ -1,6 +1,5 @@
 import '../App.css';
 import { Canvas } from '@react-three/fiber';
-import { MeshStandardMaterial } from 'three';
 import { MeshPhongMaterial } from 'three';
 
 function Work() {
