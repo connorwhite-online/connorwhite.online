@@ -13,6 +13,14 @@ const projectOne = {
     bio: 'Interactive 3D onboarding for web3 payments startup Ansible Labs.'
 };
 
-const projectThree = {
-    name: ''
-}
+const projectTwo = {
+    name: 'R3F-Kerosene',
+    tech: [
+        'Blender',
+        'VS Code',
+        'React',
+        'three.js',
+        'react-three-fiber'
+    ],
+    bio: 'Quick-start framework for react-three-fiber projects utilizing a glTF loader to be 3D-designer friendly.'
+};
