@@ -24,3 +24,17 @@ const projectTwo = {
     ],
     bio: 'Quick-start framework for react-three-fiber projects utilizing a glTF loader to be 3D-designer friendly.'
 };
+
+const projectThree = {
+    name: 'R3F-Immersive',
+    tech: [
+        'Blender',
+        'VS Code',
+        'React',
+        'three.js',
+        'react-three/xr',
+        'web-xr',
+        'react-three-fiber'
+    ],
+    bio: 'Framework for immersive AR/XR projects leveraging React and three.js.'
+}
