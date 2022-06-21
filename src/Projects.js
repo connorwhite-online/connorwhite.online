@@ -6,7 +6,7 @@ const projectOne = {
         'VS Code',
         'React',
         'three.js',
-        'react-three-fiber',
+        'react-three/fiber',
         'react-spring',
         'GSAP'
     ],
@@ -20,7 +20,7 @@ const projectTwo = {
         'VS Code',
         'React',
         'three.js',
-        'react-three-fiber'
+        'react-three/fiber'
     ],
     bio: 'Quick-start framework for react-three-fiber projects utilizing a glTF loader to be 3D-designer friendly.'
 };
@@ -34,7 +34,7 @@ const projectThree = {
         'three.js',
         'react-three/xr',
         'web-xr',
-        'react-three-fiber'
+        'react-three/fiber'
     ],
     bio: 'Framework for immersive AR/XR projects leveraging React and three.js.'
-}
+};
