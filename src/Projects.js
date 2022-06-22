@@ -44,8 +44,23 @@ const projectFour = {
     tech: [
         'Fusion 360',
         'Cinema4D',
-        'Adobe CC',
-        'laser-cutting'
+        'Illustrator',
+        'laser-cutting',
+        'manufacturing'
     ],
     bio: 'Tool production, packaging, and client-side 3D renderings for ceramic design studio, LGS.'
+};
+
+const projectFive = {
+    name: 'Multnomah Drug',
+    tech: [
+        'CLO3D',
+        'Illustrator',
+        'After Effects',
+        'brand-identity',
+        'webflow',
+        'laser-cutting',
+        'manufacturing'
+    ],
+    bio: 'Rapid production and distribution of over 4000 tech-masks during the summer of 2020.'
 };
