@@ -38,3 +38,14 @@ const projectThree = {
     ],
     bio: 'Framework for immersive AR/XR projects leveraging React and three.js.'
 };
+
+const projectFour = {
+    name: 'Little Garage Shop',
+    tech: [
+        'Fusion 360',
+        'Cinema4D',
+        'Adobe CC',
+        'laser-cutting'
+    ],
+    bio: 'Tool production, packaging, and client-side 3D renderings for ceramic design studio, LGS.'
+};
