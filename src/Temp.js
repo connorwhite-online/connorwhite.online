@@ -5,8 +5,8 @@ function Temp() {
 
             </div>
             <div id="linkouts">
-                <a href="www.linkedin.com/in/connorwhite-online"><img src="" alt=""/></a>
-                <a href="www.linkedin.com/in/connorwhite-online"><img src="" alt=""/></a>
+                <a href="https://www.linkedin.com/in/connorwhite-online/"><img src="" alt=""/></a>
+                <a href="https://github.com/connorwhite-online"><img src="" alt=""/></a>
             </div>
         </div>
     )
