@@ -2,7 +2,7 @@
   "name": "connorwhite.online",
   "version": "0.1.0",
   "homepage": "https://connorwhite.online",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@react-three/fiber": "^8.0.23",
     "@testing-library/jest-dom": "^5.16.4",
