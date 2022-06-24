@@ -1,3 +1,5 @@
+import 'Temp.css';
+
 function Temp() {
     return (
         <div id="temp">
