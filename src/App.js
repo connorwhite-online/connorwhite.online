@@ -3,6 +3,7 @@ import './App.css';
 
 // Component imports
 import Nav from './components/Nav';
+import Temp from './Temp';
 
 // View imports
 import Home from './views/Home';
@@ -12,7 +13,8 @@ import Work from './views/Work';
 function App() {
   return (
     <div id='app'>
-      <div id='navigation'>
+      < Temp />
+      {/* <div id='navigation'>
       <Nav />
       </div>
       <div id='meat'>
@@ -21,7 +23,7 @@ function App() {
           <Route path='/work' element={<Work />}/>
           <Route path='/info' element={<Info />} />
         </Routes>
-      </div>
+      </div> */}
     </div>
   );
 }

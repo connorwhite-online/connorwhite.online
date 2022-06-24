@@ -9,8 +9,19 @@ body, html, #root {
     src: url(/src/fonts/PPNeueMachina-Regular.woff2);
 }
 
+#temp {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
 #bio {
+    width: 75%;
     justify-content: center;
     font-family: "Neue-Machina-Regular";
     font-size: 3vw;
+    color: beige;
+    text-align: center;
 }
