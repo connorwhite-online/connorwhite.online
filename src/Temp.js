@@ -1,4 +1,5 @@
 import './Temp.css';
+import gsap from 'gsap';
 
 function Temp() {
     return (
