@@ -1,6 +1,13 @@
 import './Temp.css';
 import gsap from 'gsap';
 
+const bio = document.getElementById('bio');
+const linkouts = document.getElementById('linkouts');
+
+gsap.from(bio, {duration: 1, opacity: 0, y: 100, ease: "power3.out"});
+gsap.from(linkouts, {duration: 1, opacity: 0, scale: 0, ease: "power3.out"});
+
+
 function Temp() {
     return (
         <div id="temp">
