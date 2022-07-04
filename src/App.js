@@ -1,3 +1,4 @@
+import React from 'react';
 import './Temp.css';
 
 // View imports
