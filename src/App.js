@@ -16,9 +16,9 @@ function App() {
       <div id='webgl'>
         <Suspense fallback={null}>
           <Canvas camera={{ position: [2, 1, 2]}}>
-            <spotLight position={[10, 10, 10]} />
-            <spotLight position={[-10, -10, -10]} />
-            <pointLight position={[0, 5, 0]} />
+            <spotLight position={[10, 10, 10]} color={0x0ffff} />
+            <pointLight position={[-10, -10, -10]} color={0xf43473} />
+            <pointLight position={[0, 5, 0]} color={0xf27653} />
             <Model />
             <OrbitControls 
               autoRotate
