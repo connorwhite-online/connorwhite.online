@@ -1,6 +1,5 @@
 import './Temp.css';
 import gsap from 'gsap';
-import { useEffect } from 'react';
 
 function Temp() {
 

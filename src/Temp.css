@@ -12,6 +12,18 @@ body, html, #root {
     src: url(/src/fonts/PPNeueMachina-Regular.woff2);
 }
 
+#webgl {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+#dommy {
+    position: absolute;
+    z-index: 20;
+}
+
 #temp {
     display: flex;
     flex-direction: column;
