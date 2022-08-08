@@ -7,7 +7,6 @@ function Temp() {
     const bioText = useRef();
     const linkIcons = useRef();
     
-
     useEffect(() => {
         gsap.fromTo([bioText.current], {
                 y: 200, 
