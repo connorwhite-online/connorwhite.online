@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import './Temp.css';
 import { Canvas } from '@react-three/fiber';
+import gsap from 'gsap';
 
 // View imports
 import Temp from './Temp';

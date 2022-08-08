@@ -1,38 +1,36 @@
 import React, { useEffect, useRef } from 'react';
 import './Temp.css';
 import gsap from 'gsap';
-import { TimelineMax } from 'gsap/gsap-core';
 
 function Temp() {
 
-    const tl = useRef();
     const bioText = useRef();
     const linkIcons = useRef();
+    
 
     useEffect(() => {
-        tl.current = new TimelineMax()
-        .from(bioText.current, 1, { y: -100, opacity: 0 })
-        .from(linkIcons.current, 1, { y: -100, opacity: 0 })
-    }, []);
-
-
-
-
-
-    // function animations() {
-    //     const bio = document.getElementById('bio');
-    //     const linkouts = document.getElementById('linkouts');
-    
-    //     gsap.from(bio, {duration: 1, opacity: 0, y: 100, ease: "power3.out"});
-    //     gsap.from(linkouts, {duration: 1, opacity: 0, scale: 0, ease: "power3.out"});
-    // }
-
-    // useEffect(animations);
-
-    // useEffect(() => {
-    //     gsap.from(bioText.current, {duration: .75, opacity: 0, y: 100, ease: "power3.out"});
-    //     console.log('useEffect');
-    // });
+        gsap.fromTo([bioText.current], {
+                y: 200, 
+                opacity: 0,
+                ease: "power3.inOut"
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: .75
+            })
+        gsap.fromTo([linkIcons.current], {
+                y: 200, 
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                ease: "power3.inOut",
+                duration: .75,
+                delay: .25
+            })
+    } , []);
 
     return (
         <div id="temp">
