@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber';
 import Intro from './components/Intro/index';
 import Model from './components/Model/index';
 import { OrbitControls } from '@react-three/drei';
+import Gallery from './components/Gallery';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             />
           </Canvas>
         </Suspense>
+      </div>
+      <div>
+        <Gallery />
       </div>
       
     </div>
