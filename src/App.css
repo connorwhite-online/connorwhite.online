@@ -9,7 +9,7 @@ body, html, #root {
   
 @font-face {
     font-family: 'Neue-Machina-Regular';
-    src: url(/src/fonts/PPNeueMachina-Regular.woff2);
+    src: url(/src/assets/fonts/PPNeueMachina-Regular.woff2);
 }
 
 #webgl {

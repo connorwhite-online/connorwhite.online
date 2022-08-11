@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import './Temp.css';
+import '../App.css';
 import gsap from 'gsap';
 
-function Temp() {
+function Intro() {
 
     const bioText = useRef();
     const linkIcons = useRef();
@@ -44,4 +44,4 @@ function Temp() {
     )
 };
 
-export default Temp;
+export default Intro;

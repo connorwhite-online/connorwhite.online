@@ -1,18 +1,17 @@
 import React, { Suspense } from 'react';
-import './Temp.css';
+import './App.css';
 import { Canvas } from '@react-three/fiber';
-import gsap from 'gsap';
 
 // View imports
-import Temp from './Temp';
-import Model from './Model';
+import Intro from './components/Intro';
+import Model from './components/Model';
 import { OrbitControls } from '@react-three/drei';
 
 function App() {
   return (
     <div id='app'>
       <div id='dommy'>
-        <Temp />
+        <Intro />
       </div>
       <div id='webgl'>
         <Suspense fallback={null}>
