@@ -3,8 +3,8 @@ import './App.css';
 import { Canvas } from '@react-three/fiber';
 
 // View imports
-import Intro from './components/Intro';
-import Model from './components/Model';
+import Intro from './components/Intro/index';
+import Model from './components/Model/index';
 import { OrbitControls } from '@react-three/drei';
 
 function App() {

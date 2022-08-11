@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import '../App.css';
+import '../../App.css';
 import gsap from 'gsap';
 
 function Intro() {
