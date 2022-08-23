@@ -9,6 +9,7 @@ function Gallery() {
 
     const [clicked, setClicked] = useState(false);
 
+    // expand array to include title, bio, folder, and id
     const [galleryThumbs] = useState([
         {
             name: 'm1 one',
@@ -40,6 +41,7 @@ function Gallery() {
         }
     ])
 
+    // export animations to a new hook that can be reused
     useEffect(() => {
         gsap.fromTo([titleRef.current], {
                 x: 200, 
@@ -70,11 +72,12 @@ function Gallery() {
                     <div className="project">
                         <h1 ref={titleRef} className="project-title">{thumb.name}</h1>
                         <img
+                            // source array of images from each project folder assets/images/${project}/${i}
                             src={require(`../../assets/images/${i}.jpg`)}
+                            // alt = {project.name} + {project.id}
                             alt={thumb.name}
                             key={thumb}
                             ref={thumbRef}
-                            onClick={handleClick}
                             className="thumb"
                         />
                     </div>
