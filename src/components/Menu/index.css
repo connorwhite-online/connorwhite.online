@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Telegraf-Ultralight';
+    src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2);
+}
+
+:root {
+    --color-light: #fffff0;
+}
+
+#menu {
+    position: absolute;
+    display: flex;
+    width: 95vw;
+    padding: 2.5vw;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.name {
+    font-family: 'Telegraf-Ultralight';
+    font-size: 2vw;
+    color: var(--color-light);
+}

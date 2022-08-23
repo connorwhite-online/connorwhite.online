@@ -1,6 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import '../../App.css';
+import React, { useEffect, useRef, Suspense } from 'react';
+import './index.css';
 import gsap from 'gsap';
+
+// 3D Canvas & Controls
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+
+// 3D Model Imported
+import Model from '../Model/index';
 
 function Intro() {
 
@@ -17,28 +24,29 @@ function Intro() {
                 y: 0,
                 opacity: 1,
                 duration: .75
-            })
-        gsap.fromTo([linkIcons.current], {
-                y: 200, 
-                opacity: 0,
-            },
-            {
-                y: 0,
-                opacity: 1,
-                ease: "power3.inOut",
-                duration: .75,
-                delay: .25
-            })
+            });
     } , []);
 
     return (
-        <div id="temp">
-            <div ref={bioText} id="bio">
-            Hey, I'm a designer and developer interested in augmented reality, real-time 3D, additive manufacturing, and blockchain smart-contracts. 
+        <div id="intro">
+            <div id='dom'>
+                <div ref={bioText} id="bio">
+                    Hey, I'm an interactive <span className="hl">designer and developer</span> interested in AR, machine learning, additive manufacturing, and connecting communities.
+                </div>
             </div>
-            <div ref={linkIcons} id="linkouts">
-                <a href="https://www.linkedin.com/in/connorwhite-online/" target={"_blank"} rel="noreferrer"><img src="../images/linkedin.png" alt="Connor's LinkedIn" style={{width: 40, padding: 10}} /></a>
-                <a href="https://github.com/connorwhite-online" target={"_blank"} rel="noreferrer"><img src="../images/github.png" alt="Connor's Github" style={{width: 40, padding: 10}} /></a>
+            <div id='webgl'>
+                <Suspense fallback={null}>
+                    <Canvas camera={{ position: [2, 1, 2]}}>
+                        <spotLight position={[10, 10, 10]} color={0x0ffff} />
+                        <spotLight position={[-10, -10, -10]} color={0xf43473} />
+                        <pointLight position={[0, 5, 0]} color={0xf27653} />
+                        <Model />
+                        <OrbitControls 
+                            autoRotate
+                            autoRotateSpeed={0.75}
+                        />
+                    </Canvas>
+                </Suspense>
             </div>
         </div>
     )
