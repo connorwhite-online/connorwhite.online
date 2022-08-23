@@ -64,16 +64,6 @@ function Gallery() {
             })
     } , []);
 
-    function handleClick() {
-        let className = "thumb"
-        if (clicked = true) {
-            className += "click-state"
-        }
-        else {
-            return className
-        }
-    }
-
     return(
         <div className="gallery">
                 {galleryThumbs.map((thumb, i) => (
