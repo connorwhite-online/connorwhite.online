@@ -2,6 +2,7 @@ import React, { useEffect, useRef, Suspense } from 'react';
 import './index.css';
 import gsap from 'gsap';
 
+
 // 3D Canvas & Controls
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
@@ -12,20 +13,22 @@ import Model from '../Model/index';
 function Intro() {
 
     const bioText = useRef();
-    const linkIcons = useRef();
     
     useEffect(() => {
         gsap.fromTo([bioText.current], {
-                y: 200, 
-                opacity: 0,
-                ease: "power3.inOut"
-            },
-            {
-                y: 0,
-                opacity: 1,
-                duration: .75
-            });
+            y: 200, 
+            opacity: 0,
+            ease: "power3.inOut"
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.25
+        });
     } , []);
+
+    
 
     return (
         <div id="intro">

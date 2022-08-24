@@ -7,17 +7,48 @@
     --color-light: #fffff0;
 }
 
-#menu {
+.menu {
     position: absolute;
+    z-index: 100;
+}
+
+.navbar {
     display: flex;
     width: 95vw;
     padding: 2.5vw;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: center;
 }
 
 .name {
     font-family: 'Telegraf-Ultralight';
-    font-size: 2vw;
+    font-size: 6vw;
     color: var(--color-light);
+}
+
+.menu-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.menu-items {
+    font-family: 'Telegraf-Regular';
+    font-size: 10vw;
+    color: var(--color-light);
+    text-align: start;
+    padding: 2.5vw;
+}
+
+.menu-items-hidden {
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .menu-items {
+        text-align: end;
+        font-size: 1.5vw;
+    }
+    .name {
+        font-size: 2vw;
+    }
 }

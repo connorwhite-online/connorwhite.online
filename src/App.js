@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // View imports
@@ -10,6 +11,9 @@ function App() {
   return (
     <div id='app'>
       <Menu />
+      <Routes>
+        <Route path='/' element={<Intro />} />
+      </Routes>
       <Intro />
     </div>
   );

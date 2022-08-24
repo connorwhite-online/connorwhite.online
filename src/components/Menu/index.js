@@ -1,39 +1,71 @@
-import React, { useEffect, useRef } from "react";
-import "./index.css";
-import gsap from "gsap";
+import React, { useEffect, useState, useRef } from 'react';
+import './index.css';
+import gsap from 'gsap';
 
 function Menu() {
 
     const logoRef = useRef();
     const iconRef = useRef();
+    const dropDownRef = useRef();
+    const menuTimeline = useRef();
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         gsap.fromTo([logoRef.current], {
             scaleY: 0,
+            opacity: 0,
         },
         {
             scaleY: 1,
-            duration: 1,
+            opacity: 1,
+            duration: 1.25,
             ease: "power3.inOut"
         })
         gsap.fromTo([iconRef.current], {
             scale: 0,
-            rotateZ: 180
+            rotateZ: -180
         },
         {
             scale: 1,
             rotateZ: 0,
             duration: 1,
-            ease: "power3.inOut"
+            ease: "power3.inOut",
+            delay: .75
         })
     }, []);
 
-    
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+        console.log(menuOpen);
+    }
+
+    useEffect(() => {
+        if (menuOpen === true) {
+            gsap.fromTo([iconRef.current], {
+                rotateZ: 0
+            }, 
+            {
+                rotateZ: -180,
+                duration: 1,
+                ease: "power3.inOut",
+                delay: .25
+            })
+        }
+    }, []);
+
+
     return (
-        <div id="menu">
-            <div className="name" ref={logoRef}>connor white</div>
-            <div className="nav">
-                <img ref={iconRef} src="./media/icons/menu-button.svg" alt="menu button" />
+        <div className="menu">
+            <div className="navbar">
+                <div className="name" ref={logoRef}>connor white</div>
+                <div className="menu-icon">
+                    <img onClick={toggleMenu} ref={iconRef} src="./media/icons/menu-button.svg" alt="menu button" />
+                </div>
+            </div>
+            <div ref={dropDownRef} className={menuOpen ? "menu-items" : "menu-items-hidden"}> 
+                    insert menu
             </div>
             
             {/* <div ref={linkIcons} id="linkouts">
