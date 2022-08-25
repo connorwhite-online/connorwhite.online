@@ -8,6 +8,7 @@ function Menu() {
     const logoRef = useRef();
     const iconRef = useRef();
     const dropDownRef = useRef();
+    const menuRef = useRef();
     const menuTimeline = useRef();
 
     const [menuOpen, setMenuOpen] = useState(false);
@@ -36,6 +37,55 @@ function Menu() {
         })
     }, []);
 
+    menuTimeline.current = gsap.timeline({ paused: true });
+    // menuTimeline.current
+    // .fromTo(
+    //     [menuRef.current],
+    //     {
+    //         y: -100,
+    //     }, {
+    //         y: 0,
+    //         duration: 1,
+    //         ease: "power3.inOut"
+    //     }
+    // )
+    // .fromTo([logoRef.current], {
+    //     opacity: 0,
+    // }, {
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: "power3.inOut",
+    // }
+
+    // )
+    // .fromTo([iconRef.current], {
+    //     rotateZ: 0,
+    // }, {
+    //     rotateZ: 270,
+    //     duration: 1,
+    //     ease: "power3.inOut",
+    // }
+
+    // )
+    // .fromTo([dropDownRef.current], {
+    //     opacity: 0,
+    //     scaleY: 0,
+    // }, {
+    //     opacity: 1,
+    //     scaleY: 1,
+    //     duration: 1,
+    //     ease: "power3.inOut",
+    //     stagger: {
+    //         amount: .15
+    //     }
+    // }
+
+    // )
+
+    useEffect(() => {
+        menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
+    }, []);
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -58,17 +108,23 @@ function Menu() {
 
 
     return (
-        <div className="menu">
+        <div ref={menuRef} className={menuOpen ? "menu-open" : "menu"}>
             <div className="navbar">
-                <div className="name" ref={logoRef}>connor white</div>
-                <div className="menu-icon">
-                    <img onClick={toggleMenu} ref={iconRef} src="./media/icons/menu-button.svg" alt="menu button" />
+                <div className={menuOpen ? "name-open" : "name"} ref={logoRef}>connor white</div>
+                <div >
+                    <img onClick={toggleMenu} ref={iconRef} src={menuOpen ? "./media/icons/menu-button-black.svg" : "./media/icons/menu-button.svg"} alt="menu button" className={menuOpen ? "menu-icon-open" : "menu-icon"}/>
                 </div>
             </div>
             <div ref={dropDownRef} className={menuOpen ? "menu-items" : "menu-items-hidden"}> 
-                    <NavLink to="/" className="nav-link">Intro</NavLink>
-                    <NavLink to="/projects" className="nav-link">Projects</NavLink>
-                    <NavLink to="/contact" className="nav-link">Contact</NavLink>
+                    <NavLink to="/" className="nav-link" onClick={toggleMenu}>Intro</NavLink>
+                    <NavLink to="/projects" className="nav-link" onClick={toggleMenu}>Projects</NavLink>
+                    <NavLink to="/contact" className="nav-link" onClick={toggleMenu}>Contact</NavLink>
+                    <div className="linkouts"> 
+                        <a href="https://www.linkedin.com/in/connorwhite-online/" target={"_blank"} rel="noreferrer"><img src="./media/icons/linkedin-icon.png" alt="Connor's LinkedIn" className="social-links" /></a>
+                        <a href="https://github.com/connorwhite-online" target={"_blank"} rel="noreferrer"><img src="./media/icons/github-icon.png" alt="Connor's Github" className="social-links" /></a>
+                        <a href="https://twitter.com/connor_online" target={"_blank"} rel="noreferrer"><img src="./media/icons/twitter-icon.png" alt="Connor's Twitter" className="social-links" /></a>
+                        <a href="https://instagram.com/connorwhite.online" target={"_blank"} rel="noreferrer"><img src="./media/icons/instagram-icon.png" alt="Connor's Instagram" className="social-links" /></a>
+                    </div>
             </div>
             
             {/* <div ref={linkIcons} id="linkouts">

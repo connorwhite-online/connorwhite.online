@@ -5,11 +5,23 @@
 
 :root {
     --color-light: #fffff0;
+    --color-dark: #000000;
+    --filter-dark: invert(0%) sepia(4%) saturate(11%) hue-rotate(297deg) brightness(102%) contrast(101%);
 }
 
 .menu {
     position: absolute;
     z-index: 100;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu-open {
+    position: absolute;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-light);
 }
 
 .navbar {
@@ -26,7 +38,19 @@
     color: var(--color-light);
 }
 
+.name-open {
+    font-family: 'Telegraf-Ultralight';
+    font-size: 6vw;
+    color: var(--color-dark);
+}
+
 .menu-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon-open {
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -39,18 +63,30 @@
     padding-top: 5vh;
 }
 
-.nav-link {
-    font-family: 'Telegraf-Regular';
-    font-size: 10vw;
-    color: var(--color-light);
-    text-align: start;
-    text-decoration: none;
-    padding-bottom: 2vh;
-}
-
 .menu-items-hidden {
     display: none;
 }
+
+.nav-link {
+    font-family: 'Telegraf-Regular';
+    font-size: 10vw;
+    color: var(--color-dark);
+    text-align: start;
+    text-decoration: none;
+    margin-bottom: 4vh;
+}
+
+.linkouts {
+    display: flex;
+}
+
+.social-links {
+    width: 35px;
+    height: 35px;
+    margin-right: 5vw;
+}
+
+
 
 @media (min-width: 720px) {
     .menu-items {
@@ -60,9 +96,22 @@
     }
     .nav-link {
         font-size: 1.5vw;
-        padding-bottom: 1vh;
+        margin-bottom: 2.5vh;
     }
     .name {
         font-size: 2vw;
+    }
+    .name-open {
+        font-size: 2vw;
+
+    }
+    .linkouts {
+        align-items: end;
+    }
+    .social-links {
+        width: 25px;
+        height: 25px;
+        margin-left: 1vw;
+        cursor: pointer;
     }
 }
