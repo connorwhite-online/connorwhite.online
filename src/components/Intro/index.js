@@ -46,7 +46,7 @@ function Intro() {
                         <Model />
                         <OrbitControls 
                             autoRotate
-                            autoRotateSpeed={0.75}
+                            autoRotateSpeed={1}
                         />
                     </Canvas>
                 </Suspense>

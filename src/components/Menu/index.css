@@ -29,14 +29,23 @@
 .menu-icon {
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
 
 .menu-items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5vw;
+    padding-top: 5vh;
+}
+
+.nav-link {
     font-family: 'Telegraf-Regular';
     font-size: 10vw;
     color: var(--color-light);
     text-align: start;
-    padding: 2.5vw;
+    text-decoration: none;
+    padding-bottom: 2vh;
 }
 
 .menu-items-hidden {
@@ -45,8 +54,13 @@
 
 @media (min-width: 720px) {
     .menu-items {
-        text-align: end;
+        padding-right: 2.5vw;
+        padding-top: 1vh;
+        align-items: end;
+    }
+    .nav-link {
         font-size: 1.5vw;
+        padding-bottom: 1vh;
     }
     .name {
         font-size: 2vw;

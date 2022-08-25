@@ -14,7 +14,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Intro />} />
       </Routes>
-      <Intro />
     </div>
   );
 }

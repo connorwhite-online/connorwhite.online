@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
 import './index.css';
 import gsap from 'gsap';
 
@@ -65,7 +66,9 @@ function Menu() {
                 </div>
             </div>
             <div ref={dropDownRef} className={menuOpen ? "menu-items" : "menu-items-hidden"}> 
-                    insert menu
+                    <NavLink to="/" className="nav-link">Intro</NavLink>
+                    <NavLink to="/projects" className="nav-link">Projects</NavLink>
+                    <NavLink to="/contact" className="nav-link">Contact</NavLink>
             </div>
             
             {/* <div ref={linkIcons} id="linkouts">
