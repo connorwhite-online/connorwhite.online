@@ -12,8 +12,6 @@
 .menu {
     position: absolute;
     z-index: 100;
-    width: 100vw;
-    height: 100vh;
 }
 
 .menu-open {
@@ -83,7 +81,7 @@
 .social-links {
     width: 35px;
     height: 35px;
-    margin-right: 5vw;
+    margin-right: 7.5vw;
 }
 
 
@@ -112,6 +110,7 @@
         width: 25px;
         height: 25px;
         margin-left: 1vw;
+        margin-right: 0;
         cursor: pointer;
     }
 }

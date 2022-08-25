@@ -37,54 +37,9 @@ function Menu() {
         })
     }, []);
 
-    menuTimeline.current = gsap.timeline({ paused: true });
-    // menuTimeline.current
-    // .fromTo(
-    //     [menuRef.current],
-    //     {
-    //         y: -100,
-    //     }, {
-    //         y: 0,
-    //         duration: 1,
-    //         ease: "power3.inOut"
-    //     }
-    // )
-    // .fromTo([logoRef.current], {
-    //     opacity: 0,
-    // }, {
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "power3.inOut",
-    // }
-
-    // )
-    // .fromTo([iconRef.current], {
-    //     rotateZ: 0,
-    // }, {
-    //     rotateZ: 270,
-    //     duration: 1,
-    //     ease: "power3.inOut",
-    // }
-
-    // )
-    // .fromTo([dropDownRef.current], {
-    //     opacity: 0,
-    //     scaleY: 0,
-    // }, {
-    //     opacity: 1,
-    //     scaleY: 1,
-    //     duration: 1,
-    //     ease: "power3.inOut",
-    //     stagger: {
-    //         amount: .15
-    //     }
-    // }
-
-    // )
-
-    useEffect(() => {
-        menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
-    }, []);
+    // useEffect(() => {
+    //     menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
+    // }, []);
 
 
     const toggleMenu = () => {
@@ -120,7 +75,7 @@ function Menu() {
                     <NavLink to="/projects" className="nav-link" onClick={toggleMenu}>Projects</NavLink>
                     <NavLink to="/contact" className="nav-link" onClick={toggleMenu}>Contact</NavLink>
                     <div className="linkouts"> 
-                        <a href="https://www.linkedin.com/in/connorwhite-online/" target={"_blank"} rel="noreferrer"><img src="./media/icons/linkedin-icon.png" alt="Connor's LinkedIn" className="social-links" /></a>
+                        <a href="https://www.linkedin.com/in/connorwhite-online/" target={"_blank"} rel="noreferrer"><img src="./media/icons/linkedin.svg" alt="Connor's LinkedIn" className="social-links" /></a>
                         <a href="https://github.com/connorwhite-online" target={"_blank"} rel="noreferrer"><img src="./media/icons/github-icon.png" alt="Connor's Github" className="social-links" /></a>
                         <a href="https://twitter.com/connor_online" target={"_blank"} rel="noreferrer"><img src="./media/icons/twitter-icon.png" alt="Connor's Twitter" className="social-links" /></a>
                         <a href="https://instagram.com/connorwhite.online" target={"_blank"} rel="noreferrer"><img src="./media/icons/instagram-icon.png" alt="Connor's Instagram" className="social-links" /></a>
