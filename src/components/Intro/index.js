@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, Suspense } from 'react';
 import './index.css';
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 
 
 // 3D Canvas & Controls
