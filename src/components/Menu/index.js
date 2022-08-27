@@ -94,6 +94,9 @@ function Menu() {
 
     useEffect(() => {
 
+        // Works in reverse but needs classNames to change at same pace rather than immediately.
+        // setMenuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
+
         menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
 
     }, [menuOpen]);
