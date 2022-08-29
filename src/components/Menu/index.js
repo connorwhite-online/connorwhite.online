@@ -64,13 +64,11 @@ function Menu() {
     }, 0);
     menuTimeline.current.fromTo(dropDownRef.current.children, {
         opacity: 0,
-        y: -40,
-        scaleX: 0,
+        scaleY: 0,
     }, {
         opacity: 1,
-        y: 0,
-        scaleX: 1,
-        duration: .25,
+        scaleY: 1,
+        duration: .5,
         ease: "power4.inOut",
         delay: .25,
         stagger: {
@@ -100,6 +98,7 @@ function Menu() {
         menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
 
     }, [menuOpen]);
+    
 
     return (
         <div ref={menuRef} className={menuOpen ? "menu-open" : "menu"}>
