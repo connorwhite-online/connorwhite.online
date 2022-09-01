@@ -14,13 +14,6 @@
     z-index: 100;
 }
 
-.menu-open {
-    position: absolute;
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-}
-
 .navbar {
     display: flex;
     width: 95vw;
@@ -47,10 +40,8 @@
     cursor: pointer;
 }
 
-.menu-icon-open {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+.hidden {
+    display: none;
 }
 
 .menu-items {
@@ -60,14 +51,10 @@
     padding-top: 5vh;
 }
 
-.menu-items-hidden {
-    display: none;
-}
-
 .nav-link {
     font-family: 'Telegraf-Regular';
     font-size: 10vw;
-    color: var(--color-dark);
+    color: var(--color-light);
     text-align: start;
     text-decoration: none;
     margin-bottom: 4vh;
