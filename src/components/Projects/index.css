@@ -1,6 +1,10 @@
+:root {
+    --color-light: #fffff0;
+}
+
 @font-face {
-    font-family: 'Neue-Machina-Regular';
-    src: url(../../assets/fonts/PPNeueMachina-Regular.woff2);
+    font-family: 'Hatton-Light';
+    src: url(../../assets/fonts/PPHatton-Light.woff2);
 }
 
 .gallery{
@@ -19,8 +23,8 @@
 }
 
 .project-title {
-    color: white;
-    font-family: 'Neue-Machina-Regular';
+    color: var(--color-light);
+    font-family: 'Hatton-Light';
 }
 
 .project {
@@ -28,5 +32,5 @@
 }
 
 .click-state {
-    border: white, 2px;
+    border: var(--color-light), 2px;
 }
