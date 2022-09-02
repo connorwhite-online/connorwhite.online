@@ -32,10 +32,6 @@ function Gallery() {
         {
             name: 'm1 six',
             bio: 'vroom vroom',
-        },
-        {
-            name: 'm1 seven',
-            bio: 'vroom vroom',
         }
     ])
 
