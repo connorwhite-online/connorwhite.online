@@ -20,17 +20,21 @@
 
 :root {
     --color-light: #fffff0;
+    --color-dark: #000000;
 }
 
 #intro {
+    position: absolute;
+    background-color: var(--color-dark);
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    z-index: 50;
 }
 
 #webgl {
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     z-index: 10;
