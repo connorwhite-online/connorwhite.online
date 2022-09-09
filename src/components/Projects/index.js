@@ -1,16 +1,26 @@
 import React, { useRef, useState, useEffect } from "react";
 import './index.css';
 import gsap from "gsap";
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+// Kill Console Warnings on Null GSAP Targets
+    gsap.config({
+        nullTargetWarn: false,
+        trialWarn: false,
+    });
+    
+    gsap.set('.null', {opacity: 1})
 
 function Gallery() {
 
+    // Setup Refs
     const titleRef = useRef();
     const bioRef = useRef();
     const linkRef = useRef();
     const imageRef = useRef();
 
-    const [project, setProject] = useState(0);
-
+    // Project Loading Animation
     useEffect(() => {
         gsap.fromTo(titleRef.current, {
             opacity: 0,
@@ -90,19 +100,14 @@ function Gallery() {
             folder: 'parachute-papers',
             link: 'https://www.parachutepapers.com/',
         }
-    ])
-
-    function currentProject() {
-        setProject(project);
-        console.log(project);
-    }
+    ]);
 
     return(
         // Component Container
         <div className="gallery">
                 {/* Mapping through Projects array to create individual projects */}
                 {Projects.map((project, i) => (
-                    <div className="project" key={project.name} onFocus={currentProject}>
+                    <div className="project" key={project.name}>
                         <div className="project-info">
                             <h1 ref={titleRef.current} className="project-title">{project.name}</h1>
                             <p ref={bioRef.current} className="project-bio">{project.bio}</p>
