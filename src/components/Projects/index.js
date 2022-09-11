@@ -12,54 +12,40 @@ gsap.registerPlugin(ScrollTrigger);
     
     gsap.set('.null', {opacity: 1})
 
+
+
 function Gallery() {
 
     // Setup Refs
-    const titleRef = useRef();
-    const bioRef = useRef();
-    const linkRef = useRef();
-    const imageRef = useRef();
+    const gallery = useRef(null);
 
-    // Project Loading Animation
     useEffect(() => {
-        gsap.fromTo(titleRef.current, {
-            opacity: 0,
-            scaleY: 0,
-        }, {
-            opacity: 1,
-            scaleY: 1,
-            duration: 1,
-            ease: "power4.out",
-        });
-        gsap.fromTo(bioRef.current, {
-            opacity: 0,
-            y: -100,
-        }, {
-            opacity: 1,
-            y: 1,
-            duration: 1,
-            ease: "power4.out",
-        });
-        gsap.fromTo(linkRef.current, {
-            opacity: 0,
-            scaleY: 0,
-        }, {
-            opacity: 1,
-            scaleY: 1,
-            duration: 1,
-            ease: "power4.out",
-        });
-        gsap.fromTo(imageRef.current, {
-            opacity: 0,
-            scaleY: 0,
-        }, {
-            opacity: 1,
-            scaleY: 1,
-            duration: 1,
-            ease: "power4.out",
-        });
-
-    }, []);
+        let ctx = gsap.context(() => {
+          let projects = gsap.utils.toArray(".project");
+                projects.forEach((project, i) => {
+                    gsap.fromTo(project, {
+                        opacity: 0,
+                        y: 100,
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.5,
+                        scrollTrigger: {
+                            trigger: project, 
+                            scroller: gallery.current,
+                            start: "left center",
+                            end: "right center",
+                            horizontal: true,
+                            toggleActions: "play reverse play reverse"
+                        }
+                        
+                    })
+                })
+          
+        }, gallery); // <-- scope all selector text to the component
+        
+        return () => ctx.revert();
+      }, []);
         
     // Array of Individual Projects
     const [Projects] = useState([
@@ -104,14 +90,14 @@ function Gallery() {
 
     return(
         // Component Container
-        <div className="gallery">
+        <div className="gallery" ref={gallery}>
                 {/* Mapping through Projects array to create individual projects */}
                 {Projects.map((project, i) => (
                     <div className="project" key={project.name}>
                         <div className="project-info">
-                            <h1 ref={titleRef.current} className="project-title">{project.name}</h1>
-                            <p ref={bioRef.current} className="project-bio">{project.bio}</p>
-                            <a ref={linkRef.current} className="project-link" href={project.link} target={"_blank"} rel="noreferrer">view live project →</a>
+                            <h1 className="project-title">{project.name}</h1>
+                            <p className="project-bio">{project.bio}</p>
+                            <a className="project-link" href={project.link} target={"_blank"} rel="noreferrer">view live project →</a>
                         </div>
                         <div className="project-image">
                             <img
@@ -119,7 +105,6 @@ function Gallery() {
                                 src={require(`../../assets/images/${i}.jpg`)}
                                 // alt = {project.name} + {project.i}
                                 alt={project.name}
-                                ref={imageRef.current}
                                 className="thumb"
                             />
                         </div>
