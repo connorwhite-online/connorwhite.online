@@ -10,35 +10,40 @@ gsap.registerPlugin(ScrollTrigger);
         trialWarn: false,
     });
     
-    gsap.set('.null', {opacity: 1})
-
-
+    gsap.set('.null', {opacity: 1});
 
 function Gallery() {
 
-    // Setup Refs
+    // Setup root component Ref
     const gallery = useRef(null);
 
     useEffect(() => {
         let ctx = gsap.context(() => {
           let projects = gsap.utils.toArray(".project");
                 projects.forEach((project, i) => {
-                    gsap.fromTo(project, {
+                    
+                    let info = project.querySelector(".project-info");
+
+                    gsap.fromTo([info.children, project.children], {
                         opacity: 0,
-                        y: 100,
+                        x: 100,
                     }, {
                         opacity: 1,
-                        y: 0,
-                        duration: 1.5,
+                        x: 0,
+                        duration: 1,
+                        stagger: {
+                            each: 0.25,
+                            from: "start",
+                            ease: "power4.out",
+                        },
                         scrollTrigger: {
-                            trigger: project, 
+                            trigger: project,
                             scroller: gallery.current,
                             start: "left center",
                             end: "right center",
                             horizontal: true,
-                            toggleActions: "play reverse play reverse"
+                            toggleActions: "play reset play reverse"
                         }
-                        
                     })
                 })
           
