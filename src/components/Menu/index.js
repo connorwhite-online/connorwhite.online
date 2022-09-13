@@ -2,31 +2,32 @@ import React, { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import './index.css';
 import gsap from 'gsap';
+import {TextPlugin} from 'gsap/TextPlugin';
+gsap.registerPlugin(TextPlugin);
 
 function Menu() {
 
+    // Ref Declarations
     const logoRef = useRef();
     const iconRef = useRef();
     const dropDownRef = useRef();
     const menuItemsRef = useRef([]);
     const linkRef = useRef([]);
     const menuTimeline = useRef();
-    const reverseTL = useRef();
 
     const [menuOpen, setMenuOpen] = useState(false);
 
     // NavBar Loading Animation
     useEffect(() => {
-        dropDownRef.current.style.display = 'none';
         gsap.fromTo([logoRef.current], {
-            scaleY: 0,
+            text: '',
             opacity: 0,
         },
         {
-            scaleY: 1,
+            text: 'connor white',
             opacity: 1,
-            duration: 1.25,
-            ease: "power3.inOut"
+            duration: 2,
+            ease: "power4.inOut"
         })
         gsap.fromTo([iconRef.current], {
             x: 75,
@@ -50,33 +51,51 @@ function Menu() {
     menuTimeline.current = gsap.timeline({ paused: true });
     menuTimeline.current.fromTo(dropDownRef.current, {
         opacity: 0,
-        backgroundColor: 'none'
+        display: 'none',
+        height: '0vh',
+        width: '0vw',
+        backgroundColor: 'transparent',
     }, {
         opacity: 1,
-        backgroungColor: '#000000',
+        display: 'block',
+        position: 'absolute',
+        height: '100vh',
+        width: '100vw',
+        backgroundColor: '#000000',
         duration: .25,
         ease: "power4.inOut"
     }, 0);
     menuTimeline.current.fromTo(iconRef.current, {
         rotateZ: 0
     }, {
-        rotateZ: 405,
+        rotateZ: 315,
         duration: .75,
         ease: "back.inOut"
-    }, 0);
+    }, .25);
+    menuTimeline.current.fromTo(logoRef.current, {
+        text: {
+            value: 'connor white',
+        }
+    },{
+        duration: 1,
+        text: {
+            value: 'designer & developer',
+            ease: "power4.inOut"
+        }, 
+    }, .25);
     menuTimeline.current.fromTo(menuItemsRef.current.children, {
         opacity: 0,
-        scaleY: 0,
+        x: 25,
     }, {
         opacity: 1,
-        scaleY: 1,
-        duration: .5,
+        x: 0,
+        duration: .25,
         ease: "power4.inOut",
         delay: .25,
         stagger: {
             amount: .25
         }
-    }, 0);
+    }, .25);
     menuTimeline.current.fromTo(linkRef.current.children, {
         scale: 0,
         opacity: 0,
@@ -91,56 +110,14 @@ function Menu() {
         }
     }, .5);
 
-    // Menu Timeline Reverse Animation
-    reverseTL.current = gsap.timeline({ paused: true });
-    reverseTL.current.fromTo(iconRef.current, {
-        rotateZ: 405
-    }, {
-        rotateZ: -360,
-        duration: .75,
-        ease: "back.inOut"
-    }, 0);
-    reverseTL.current.fromTo(linkRef.current.children, {
-        scale: 1,
-        opacity: 1,
-    }, {
-            scale: 0,
-            opacity: 0,
-            duration: .5,
-            ease: "back.inOut",
-            stagger: {
-                amount: .25,
-                from: 'end'
-            }
-    }, 0);
-    reverseTL.current.fromTo(menuItemsRef.current.children, {
-        opacity: 1,
-        scaleY: 1,
-    }, {
-            opacity: 0,
-            scaleY: 0,
-            duration: .5,
-            delay: .25,
-            ease: "power4.inOut",
-            stagger: {
-                amount: .25
-            }
-    }, 0);
-
-
+    // Run menu timeline animation when menu state changes
     useEffect(() => {
 
-        menuOpen ? menuTimeline.current.play() : reverseTL.current.play();
+        let ctx = gsap.context(() => {
+            menuOpen ? menuTimeline.current.play() : menuTimeline.current.reversed();
+        })
 
-        if (menuOpen) {
-            setTimeout(() => {
-                dropDownRef.current.style.display = 'block';
-            }, 250);
-        } else {
-            setTimeout(() => {
-                dropDownRef.current.style.display = 'none';
-            }, 2000);
-        }
+        return () => ctx.revert();
 
     }, [setMenuOpen, menuOpen]);
     
@@ -153,7 +130,7 @@ function Menu() {
                     <img onClick={toggleMenu} ref={iconRef} src="./media/icons/menu-button.svg" alt="menu button" className="menu-icon"/>
                 </div>
             </div>
-            <div ref={dropDownRef}>
+            <div className="dropdown" ref={dropDownRef}>
                 <div ref={menuItemsRef} className="menu-items"> 
                         <NavLink to="/" className="nav-link" onClick={toggleMenu}>Intro</NavLink>
                         <NavLink to="/projects" className="nav-link" onClick={toggleMenu}>Projects</NavLink>

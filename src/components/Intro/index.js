@@ -34,7 +34,7 @@ function Intro() {
         <div className="intro">
             <div className="dom">
                 <div ref={bioText} className="bio">
-                    Hey, I'm an interactive <span className="hl">designer and developer</span> interested in AR, machine learning, additive manufacturing, and connecting communities.
+                    Hey, I'm an interactive <span className="hl">designer and developer</span> interested in AR, machine learning, additive manufacturing, and distributed communities.
                 </div>
             </div>
             <div className="webgl">

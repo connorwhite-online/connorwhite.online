@@ -6,12 +6,13 @@
 :root {
     --color-light: #fffff0;
     --color-dark: #000000;
-    --filter-dark: invert(0%) sepia(4%) saturate(11%) hue-rotate(297deg) brightness(102%) contrast(101%);
 }
 
 .menu {
     z-index: 100;
+    position: relative;
     height: 10vh;
+    background-color: transparent;
 }
 
 .navbar {
@@ -20,6 +21,7 @@
     padding: 2.5vw;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
 }
 
 .name {
@@ -32,10 +34,6 @@
     width: 25px;
     height: 25px;
     cursor: pointer;
-}
-
-.hidden {
-    display: none;
 }
 
 .menu-items {
@@ -52,6 +50,10 @@
     text-align: start;
     text-decoration: none;
     margin-bottom: 4vh;
+}
+
+.dropdown {
+    display: none;
 }
 
 .linkouts {
