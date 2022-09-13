@@ -28,12 +28,6 @@
     color: var(--color-light);
 }
 
-.name-open {
-    font-family: 'Telegraf-Ultralight';
-    font-size: 6vw;
-    color: var(--color-dark);
-}
-
 .menu-icon {
     width: 25px;
     height: 25px;
@@ -84,10 +78,6 @@
     }
     .name {
         font-size: 2vw;
-    }
-    .name-open {
-        font-size: 2vw;
-
     }
     .linkouts {
         align-items: end;
