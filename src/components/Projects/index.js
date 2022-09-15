@@ -87,7 +87,7 @@ function Gallery() {
         },
         {
             name: 'Parachute Papers',
-            bio: 'Site design, Wix build, and packaging for a subscription rolling-paper brand',
+            bio: 'Site design, Wix build, and packaging for a subscription rolling-paper brand.',
             folder: 'parachute-papers',
             link: 'https://www.instagram.com/parachutepapers',
         }
