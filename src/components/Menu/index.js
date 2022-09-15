@@ -52,16 +52,17 @@ function Menu() {
     menuTimeline.current.fromTo(dropDownRef.current, {
         opacity: 0,
         display: 'none',
+        // position: 'relative',
+        // backgroundColor: 'transparent',
         height: '0vh',
         width: '0vw',
-        backgroundColor: 'transparent',
     }, {
         opacity: 1,
         display: 'block',
-        position: 'absolute',
+        // position: 'absolute',
+        backgroundColor: '#000000',
         height: '100vh',
         width: '100vw',
-        backgroundColor: '#000000',
         duration: .25,
         ease: "power4.inOut"
     }, 0);
