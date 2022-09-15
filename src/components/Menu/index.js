@@ -52,14 +52,12 @@ function Menu() {
     menuTimeline.current.fromTo(dropDownRef.current, {
         opacity: 0,
         display: 'none',
-        // position: 'relative',
         // backgroundColor: 'transparent',
         height: '0vh',
         width: '0vw',
     }, {
         opacity: 1,
         display: 'block',
-        // position: 'absolute',
         backgroundColor: '#000000',
         height: '100vh',
         width: '100vw',
@@ -103,7 +101,7 @@ function Menu() {
     }, {
         scale: 1,
         opacity: 1,
-        duration: .5,
+        duration: 1,
         ease: "back.inOut",
         stagger: {
             amount: .25,
@@ -115,7 +113,7 @@ function Menu() {
     useEffect(() => {
 
         let ctx = gsap.context(() => {
-            menuOpen ? menuTimeline.current.play() : menuTimeline.current.reversed();
+            menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse(true);
         })
 
         return () => ctx.revert();
