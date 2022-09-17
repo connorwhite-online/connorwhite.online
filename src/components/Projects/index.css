@@ -52,6 +52,7 @@
     color: var(--color-light);
     font-family: 'Hatton-Light';
     font-size: 8vw;
+    margin-bottom: 10px;
 }
 
 .project-bio {
@@ -59,6 +60,7 @@
     font-family: 'Telegraf-Regular';
     font-size: 4vw;
     width: 75%;
+    margin-bottom: 10px;
 }
 
 .project-link {

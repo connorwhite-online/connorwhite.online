@@ -5,18 +5,41 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // Kill Console Warnings on Null GSAP Targets
-    gsap.config({
-        nullTargetWarn: false,
-        trialWarn: false,
-    });
+gsap.config({
+    nullTargetWarn: false,
+    trialWarn: false,
+});
     
-    gsap.set('.null', {opacity: 1});
+gsap.set('.null', {opacity: 1});
+
+function linkHoverIn() {
+    gsap.to('.project-link', {
+        duration: 0.5,
+        x: 15,
+        letterSpacing: '1px',
+        ease: 'power4.out',
+        autoRound: false,
+    });
+}
+
+function linkHoverOut() {
+    gsap.to('.project-link', {
+        duration: 0.5,
+        letterSpacing: '0px',
+        x: 0,
+        ease: 'power4.out',
+        autoRound: false,
+    });
+}
+
+
 
 function Gallery() {
 
     // Setup root component Ref
     const gallery = useRef(null);
 
+    // Project Animation (each)
     useEffect(() => {
         let ctx = gsap.context(() => {
           let projects = gsap.utils.toArray(".project");
@@ -100,9 +123,9 @@ function Gallery() {
                 {Projects.map((project, i) => (
                     <div className="project" key={project.name}>
                         <div className="project-info">
-                            <h1 className="project-title">{project.name}</h1>
-                            <p className="project-bio">{project.bio}</p>
-                            <a className="project-link" href={project.link} target={"_blank"} rel="noreferrer">view live project →</a>
+                            <div className="project-title">{project.name}</div>
+                            <div className="project-bio">{project.bio}</div>
+                            <a className="project-link" href={project.link} onMouseEnter={linkHoverIn} onMouseLeave={linkHoverOut} target={"_blank"} rel="noreferrer">view live project →</a>
                         </div>
                         <div className="project-image">
                             <img

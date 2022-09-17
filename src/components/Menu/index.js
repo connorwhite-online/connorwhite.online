@@ -5,6 +5,44 @@ import gsap from 'gsap';
 import {TextPlugin} from 'gsap/TextPlugin';
 gsap.registerPlugin(TextPlugin);
 
+// Page link hover-in
+function linkHoverIn() {
+    gsap.to('.nav-link:hover', {
+        duration: 0.5,
+        letterSpacing: '1.25px',
+        x: -15,
+        ease: 'power4.out',
+    })
+}
+
+// Page link hover-out
+function linkHoverOut() {
+    gsap.to('.nav-link', {
+        duration: 0.5,
+        letterSpacing: '0px',
+        x: 0,
+        ease: 'power4.out',
+    })
+}
+
+// Social icon link hover-in
+function iconHoverIn() {
+    gsap.to('.social-links:hover', {
+        duration: 0.5,
+        scale: 1.25,
+        ease: 'power4.out',
+    })
+}
+
+// Social icon link hover-out
+function iconHoverOut() {
+    gsap.to('.social-links', {
+        duration: 0.5,
+        scale: 1,
+        ease: 'power4.out',
+    })
+}
+
 function Menu() {
 
     // Ref Declarations
@@ -120,7 +158,6 @@ function Menu() {
 
     }, [setMenuOpen, menuOpen]);
     
-
     return (
         <div className="menu">
             <div className="navbar">
@@ -131,14 +168,14 @@ function Menu() {
             </div>
             <div className="dropdown" ref={dropDownRef}>
                 <div ref={menuItemsRef} className="menu-items"> 
-                        <NavLink to="/" className="nav-link" onClick={toggleMenu}>Intro</NavLink>
-                        <NavLink to="/projects" className="nav-link" onClick={toggleMenu}>Projects</NavLink>
-                        <NavLink to="/contact" className="nav-link" onClick={toggleMenu}>Contact</NavLink>
+                        <NavLink to="/" className="nav-link" onClick={toggleMenu} onMouseEnter={linkHoverIn} onMouseLeave={linkHoverOut}>Intro</NavLink>
+                        <NavLink to="/projects" className="nav-link" onClick={toggleMenu} onMouseEnter={linkHoverIn} onMouseLeave={linkHoverOut}>Projects</NavLink>
+                        <NavLink to="/contact" className="nav-link" onClick={toggleMenu} onMouseEnter={linkHoverIn} onMouseLeave={linkHoverOut}>Contact</NavLink>
                         <div ref={linkRef} className="linkouts"> 
-                            <a href="https://www.linkedin.com/in/connorwhite-online/" target={"_blank"} rel="noreferrer"><img src="./media/icons/linkedin.svg" alt="Connor's LinkedIn" className="social-links" /></a>
-                            <a href="https://github.com/connorwhite-online" target={"_blank"} rel="noreferrer"><img src="./media/icons/github.svg" alt="Connor's Github" className="social-links" /></a>
-                            <a href="https://twitter.com/connor_online" target={"_blank"} rel="noreferrer"><img src="./media/icons/twitter.svg" alt="Connor's Twitter" className="social-links" /></a>
-                            <a href="https://instagram.com/connorwhite.online" target={"_blank"} rel="noreferrer"><img src="./media/icons/instagram.svg" alt="Connor's Instagram" className="social-links" /></a>
+                            <a href="https://www.linkedin.com/in/connorwhite-online/" target={"_blank"} rel="noreferrer"><img src="./media/icons/linkedin.svg" alt="Connor's LinkedIn" className="social-links" onMouseEnter={iconHoverIn} onMouseLeave={iconHoverOut} /></a>
+                            <a href="https://github.com/connorwhite-online" target={"_blank"} rel="noreferrer"><img src="./media/icons/github.svg" alt="Connor's Github" className="social-links" onMouseEnter={iconHoverIn} onMouseLeave={iconHoverOut} /></a>
+                            <a href="https://twitter.com/connor_online" target={"_blank"} rel="noreferrer"><img src="./media/icons/twitter.svg" alt="Connor's Twitter" className="social-links" onMouseEnter={iconHoverIn} onMouseLeave={iconHoverOut} /></a>
+                            <a href="https://instagram.com/connorwhite.online" target={"_blank"} rel="noreferrer"><img src="./media/icons/instagram.svg" alt="Connor's Instagram" className="social-links" onMouseEnter={iconHoverIn} onMouseLeave={iconHoverOut} /></a>
                         </div>
                 </div>
             </div>
