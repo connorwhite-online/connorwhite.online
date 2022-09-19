@@ -8,7 +8,7 @@ gsap.registerPlugin(TextPlugin);
 // Page link hover-in
 function linkHoverIn() {
     gsap.to('.nav-link:hover', {
-        duration: 0.5,
+        duration: 0.75,
         letterSpacing: '1.25px',
         x: -15,
         ease: 'power4.out',
@@ -97,7 +97,7 @@ function Menu() {
         opacity: 1,
         display: 'block',
         backgroundColor: '#000000',
-        height: '100vh',
+        height: '92.5vh',
         width: '100vw',
         duration: .25,
         ease: "power4.inOut"
