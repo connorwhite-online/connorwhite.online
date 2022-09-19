@@ -18,6 +18,11 @@
     src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2);
 }
 
+@font-face {
+    font-family: 'NeueBit-Bold';
+    src: url(../../assets/fonts/PPNeueBit-Bold.woff2);
+}
+
 /* Component Container */
 .gallery {
     background-color: var(--color-dark);
@@ -25,6 +30,13 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+}
+
+.minimap {
+    font-family: 'Telegraf-Regular';
+    margin-left: 25px;
+    color: #fffff0;
+    opacity: 0.25;
 }
 
 /* Individual Project Container */
@@ -49,10 +61,29 @@
 }
 
 .project-title {
+    display: inline-block;
     color: var(--color-light);
     font-family: 'Hatton-Light';
     font-size: 8vw;
     margin-bottom: 10px;
+}
+
+.project-roles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.role {
+    color: var(--color-light);
+    /* background-color: var(--color-light); */
+    font-family: 'NeueBit-Bold';
+    font-size: 5vw;
+    border: var(--color-light) solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
 }
 
 .project-bio {
@@ -93,6 +124,9 @@
     }
     .project-title {
         font-size: 4vw;
+    }
+    .role {
+        font-size: 2vw;
     }
     .project-bio {
         font-size: 1.75vw;
