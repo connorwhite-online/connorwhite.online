@@ -2,6 +2,10 @@
     font-family: 'Telegraf-Ultralight';
     src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2);
 }
+@font-face {
+    font-family: 'Telegraf-Regular';
+    src: url(../../assets/fonts/PPTelegraf-Regular.woff2);
+}
 
 :root {
     --color-light: #fffff0;

@@ -6,7 +6,7 @@ import './App.css';
 import Intro from './components/Intro/index';
 import Menu from './components/Menu/index';
 import Projects from './components/Projects/index';
-// import Contact from './components/Contact/index';
+import Contact from './components/Contact/index';
 // import NotFound from './components/NotFound/index';
 
 
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Intro />} />
         <Route path='/projects' element={<Projects />} />
-        {/* <Route path='/contact' element ={<Contact />} /> */}
+        <Route path='/contact' element ={<Contact />} />
         {/* <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </div>
