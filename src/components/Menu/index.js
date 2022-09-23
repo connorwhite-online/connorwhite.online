@@ -162,7 +162,7 @@ function Menu() {
         <div className="menu">
             <div className="navbar">
                 <div className="name" ref={logoRef}>connor white</div>
-                <div >
+                <div>
                     <img onClick={toggleMenu} ref={iconRef} src="./media/icons/menu-button.svg" alt="menu button" className="menu-icon"/>
                 </div>
             </div>
