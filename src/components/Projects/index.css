@@ -33,10 +33,11 @@
 }
 
 .minimap {
-    font-family: 'Telegraf-Regular';
+    font-family: 'NeueBit-Bold';
     margin-left: 25px;
     color: #fffff0;
     opacity: 0.25;
+    font-size: 12vw;
 }
 
 /* Individual Project Container */
@@ -124,6 +125,9 @@
     }
     .project-title {
         font-size: 4vw;
+    }
+    .minimap {
+        font-size: 6vw;
     }
     .role {
         font-size: 2vw;

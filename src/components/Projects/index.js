@@ -43,7 +43,7 @@ function Gallery() {
     useEffect(() => {
         let ctx = gsap.context(() => {
           let projects = gsap.utils.toArray(".project");
-                projects.forEach((project, i) => {
+                projects.forEach((project, index) => {
                     
                     let info = project.querySelector(".project-info");
 
