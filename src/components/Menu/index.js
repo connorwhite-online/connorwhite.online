@@ -86,76 +86,77 @@ function Menu() {
     }
 
     // Menu Timeline Animation
-    menuTimeline.current = gsap.timeline({ paused: true });
-    menuTimeline.current.fromTo(dropDownRef.current, {
-        opacity: 0,
-        display: 'none',
-        // backgroundColor: 'transparent',
-        height: '0vh',
-        width: '0vw',
-    }, {
-        opacity: 1,
-        display: 'block',
-        backgroundColor: '#000000',
-        height: '92.5vh',
-        width: '100vw',
-        duration: .25,
-        ease: "power4.inOut"
-    }, 0);
-    menuTimeline.current.fromTo(iconRef.current, {
-        rotateZ: 0
-    }, {
-        rotateZ: 315,
-        duration: .75,
-        ease: "back.inOut"
-    }, .25);
-    menuTimeline.current.fromTo(logoRef.current, {
-        text: {
-            value: 'connor white',
-        }
-    },{
-        duration: 1,
-        text: {
-            value: 'designer & developer',
-            ease: "power4.inOut"
-        }, 
-    }, .25);
-    menuTimeline.current.fromTo(menuItemsRef.current.children, {
-        opacity: 0,
-        x: 25,
-    }, {
-        opacity: 1,
-        x: 0,
-        duration: .25,
-        ease: "power4.inOut",
-        delay: .25,
-        stagger: {
-            amount: .25
-        }
-    }, .25);
-    menuTimeline.current.fromTo(linkRef.current.children, {
-        scale: 0,
-        opacity: 0,
-    }, {
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-        ease: "back.inOut",
-        stagger: {
-            amount: .25,
-            from: 'end'
-        }
-    }, .5);
+    useEffect(() => {
+        menuTimeline.current = gsap.timeline({ paused: true });
+        let ctx = gsap.context(() => {
+            menuTimeline.current.fromTo(dropDownRef.current, {
+                opacity: 0,
+                display: 'none',
+                // backgroundColor: 'transparent',
+                height: '0vh',
+                width: '0vw',
+            }, {
+                opacity: 1,
+                display: 'block',
+                backgroundColor: '#000000',
+                height: '92.5vh',
+                width: '100vw',
+                duration: .25,
+                ease: "power4.inOut"
+            }, 0);
+            menuTimeline.current.fromTo(iconRef.current, {
+                rotateZ: 0
+            }, {
+                rotateZ: 315,
+                duration: .75,
+                ease: "back.inOut"
+            }, .25);
+            menuTimeline.current.fromTo(logoRef.current, {
+                text: {
+                    value: 'connor white',
+                }
+            },{
+                duration: 1,
+                text: {
+                    value: 'designer & developer',
+                    ease: "power4.inOut"
+                }, 
+            }, .25);
+            menuTimeline.current.fromTo(menuItemsRef.current.children, {
+                opacity: 0,
+                x: 25,
+            }, {
+                opacity: 1,
+                x: 0,
+                duration: .25,
+                ease: "power4.inOut",
+                delay: .25,
+                stagger: {
+                    amount: .25
+                }
+            }, .25);
+            menuTimeline.current.fromTo(linkRef.current.children, {
+                scale: 0,
+                opacity: 0,
+            }, {
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "back.inOut",
+                stagger: {
+                    amount: .25,
+                    from: 'end'
+                }
+            }, .5);
+        })
+        return () => {
+            ctx.revert();
+        };
+    }, []);
 
     // Run menu timeline animation when menu state changes
     useEffect(() => {
-
-        let ctx = gsap.context(() => {
             menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse(true);
-        })
-
-        return () => ctx.revert();
-
     }, [setMenuOpen, menuOpen]);
     
     return (
