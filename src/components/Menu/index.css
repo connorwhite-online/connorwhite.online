@@ -14,8 +14,8 @@
 
 .menu {
     z-index: 100;
-    position: relative;
-    height: 10vh;
+    position: absolute;
+    /* height: 10vh; */
     background-color: transparent;
 }
 

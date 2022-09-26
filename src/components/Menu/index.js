@@ -8,20 +8,20 @@ gsap.registerPlugin(TextPlugin);
 // Page link hover-in
 function linkHoverIn() {
     gsap.to('.nav-link:hover', {
-        duration: 0.75,
-        letterSpacing: '1.25px',
-        x: -15,
+        duration: .75,
+        letterSpacing: '1.5px',
         ease: 'power4.out',
+        autoRound: false,
     })
 }
 
 // Page link hover-out
 function linkHoverOut() {
     gsap.to('.nav-link', {
-        duration: 0.5,
+        duration: .5,
         letterSpacing: '0px',
-        x: 0,
         ease: 'power4.out',
+        autoRound: false,
     })
 }
 
@@ -90,18 +90,18 @@ function Menu() {
         menuTimeline.current = gsap.timeline({ paused: true });
         let ctx = gsap.context(() => {
             menuTimeline.current.fromTo(dropDownRef.current, {
-                opacity: 0,
+                // opacity: 0,
                 display: 'none',
                 // backgroundColor: 'transparent',
                 height: '0vh',
                 width: '0vw',
             }, {
-                opacity: 1,
+                // opacity: .75,
                 display: 'block',
                 backgroundColor: '#000000',
-                height: '92.5vh',
+                height: '88vh',
                 width: '100vw',
-                duration: .25,
+                duration: .5,
                 ease: "power4.inOut"
             }, 0);
             menuTimeline.current.fromTo(iconRef.current, {

@@ -18,12 +18,13 @@ body,html {
 }
 
 .contact {
-    width: 100vw;
+    width: 95vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2.5vw;
+    padding-top: 7.5vh;
 }
 
 .contact-text {
@@ -41,11 +42,9 @@ body,html {
 }
 
 @media (min-width: 720px) {
-    .contact {
-        width: 75vw;
-    }
     .contact-text {
         font-size: 2.5vw;
+        width: 75vw;
     }
     .email-link {
         font-size: 2.5vw;

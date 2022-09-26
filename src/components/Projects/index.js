@@ -17,7 +17,6 @@ gsap.set('.null', {opacity: 1});
 function linkHoverIn() {
     gsap.to('.project-link', {
         duration: 0.5,
-        x: 15,
         letterSpacing: '1px',
         ease: 'power4.out',
         autoRound: false,
@@ -28,7 +27,6 @@ function linkHoverOut() {
     gsap.to('.project-link', {
         duration: 0.5,
         letterSpacing: '0px',
-        x: 0,
         ease: 'power4.out',
         autoRound: false,
     });
