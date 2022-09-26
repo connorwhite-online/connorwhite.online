@@ -1,5 +1,6 @@
 import React from "react";
 import gsap from "gsap";
+import moment from "moment";
 import './index.css';
 
 function linkHoverIn() {
@@ -23,9 +24,12 @@ function linkHoverOut() {
 }
 
 function Contact () {
+    
+    const time = moment().format('h:mm a');
+
     return (
         <div className="contact">
-            <div className="contact-text">I currently have 0 unopened emails. I really do check it, so please feel free to shoot me an email regarding employment, freelance projects, or just to riff about how AGI could usher in a more equitable form of capitalism. I've never liked embedded email forms, so just use the link below!</div>
+            <div className="contact-text">I currently have 0 unopened emails. I really do check them, so please feel free to shoot me an email regarding employment, freelance projects, or just to riff about how AGI could usher in a more equitable form of capitalism. I've never liked embedded email forms, so just use the link below!<br/>FYI: it's {time} my time.</div>
             <div><a className="email-link" href="mailto: connorwhitepdx@gmail.com" onMouseEnter={linkHoverIn} onMouseLeave={linkHoverOut}>connorwhitepdx@gmail.com →</a></div>
         </div>
     )
