@@ -23,6 +23,13 @@ function linkHoverOut() {
     });
 }
 
+// function getTime() {
+//     setInterval(() => {
+//         time = moment().format('h:mm a');
+//     }, 1000);
+//     return time;
+// }
+
 function Contact () {
     
     const time = moment().format('h:mm a');
