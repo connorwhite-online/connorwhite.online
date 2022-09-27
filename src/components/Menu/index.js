@@ -8,7 +8,7 @@ gsap.registerPlugin(TextPlugin);
 // Page link hover-in
 function linkHoverIn() {
     gsap.to('.nav-link:hover', {
-        duration: .75,
+        duration: 0.5,
         letterSpacing: '1.5px',
         ease: 'power4.out',
         autoRound: false,
@@ -18,7 +18,7 @@ function linkHoverIn() {
 // Page link hover-out
 function linkHoverOut() {
     gsap.to('.nav-link', {
-        duration: .5,
+        duration: 0.5,
         letterSpacing: '0px',
         ease: 'power4.out',
         autoRound: false,
