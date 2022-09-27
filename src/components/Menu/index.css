@@ -58,6 +58,7 @@
 
 .dropdown {
     display: none;
+    overflow-y: hidden;
 }
 
 .linkouts {

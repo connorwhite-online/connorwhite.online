@@ -99,7 +99,7 @@ function Menu() {
                 // opacity: .75,
                 display: 'block',
                 backgroundColor: '#000000',
-                height: '88vh',
+                height: '95vh',
                 width: '100vw',
                 duration: .5,
                 ease: "power4.inOut"

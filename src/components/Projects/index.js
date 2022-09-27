@@ -85,7 +85,7 @@ function Gallery() {
         {
             name: 'R3F-Immersive',
             roles: ['React', 'WebXR', 'Blender'],
-            bio: 'A framework for creating immersive VR/AR experiences using React.js and three.js.',
+            bio: 'A framework for creating immersive VR/AR experiences using React.js, three.js, and WebXR. The demo is only visible via mobile VR browsers (I recommend Mozilla XR Viewer) or VR headset. A testament to the current limitations of WebXR.',
             folder: 'r3f-immersive',
             link: 'https://r3f-immersive.vercel.app',
         },
@@ -99,7 +99,7 @@ function Gallery() {
         {
             name: 'Klyxx Creative',
             roles: ['Product Design', 'Webflow'],
-            bio: 'Design and Webflow development for NYC-based creative agency.',
+            bio: 'Design and Webflow development for NYC-based creative agency. My role included in-depth case studies of previous work as well as new presentation assets.',
             folder: 'klyxx-creative',
             link: 'https://www.klyxx.co/',
 
@@ -107,14 +107,14 @@ function Gallery() {
         {
             name: 'SecurityPal',
             roles: ['Web Design', 'Webflow'],
-            bio: 'Site design and Webflow development for an SF-based IT security startup.',
+            bio: 'Site design and Webflow development for an SF-based startup expediting internal authorization security questionnaires. Congrats on your Series A!',
             folder: 'securitypal',
             link: 'https://www.securitypalhq.com/',
         },
         {
             name: 'Parachute Papers',
             roles: ['Identity', 'Packaging', 'Web Design', 'Wix'],
-            bio: 'Site design, Wix build, and packaging for a subscription rolling-paper brand.',
+            bio: 'Identity, site design, Wix build, and packaging for a subscription rolling-paper brand.',
             folder: 'parachute-papers',
             link: 'https://www.instagram.com/parachutepapers',
         }
@@ -140,7 +140,7 @@ function Gallery() {
                         <div className="project-image">
                             <img
                                 // source array of images from each project folder assets/images/${project}/${i}
-                                src={require(`../../assets/images/${index}.jpg`)}
+                                src={require(`../../assets/images/${project.folder}.png`)}
                                 // alt = {project.name} + {project.i}
                                 alt={project.name}
                                 className="thumb"

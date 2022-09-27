@@ -36,7 +36,7 @@ function Contact () {
 
     return (
         <div className="contact">
-            <div className="contact-text">I currently have 0 unopened emails. I really do check them, so please feel free to shoot me an email regarding employment, freelance projects, or just to riff about how AGI could usher in a more equitable form of capitalism. I've never liked embedded email forms, so just use the link below!<br/>FYI: it's {time} my time.</div>
+            <div className="contact-text">I currently have 0 unopened emails. I really do check them, so please feel free to shoot me an email regarding employment, freelance projects, or just to riff about literally anything but pixels.<br/> I've never liked embedded email forms, so just use the link below!<br/>FYI: it's {time} my time.</div>
             <div><a className="email-link" href="mailto: connorwhitepdx@gmail.com" onMouseEnter={linkHoverIn} onMouseLeave={linkHoverOut}>connorwhitepdx@gmail.com →</a></div>
         </div>
     )
