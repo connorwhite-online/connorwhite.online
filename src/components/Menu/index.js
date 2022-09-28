@@ -156,7 +156,7 @@ function Menu() {
 
     // Run menu timeline animation when menu state changes
     useEffect(() => {
-            menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse(true);
+            menuOpen ? menuTimeline.current.play() : menuTimeline.current.reverse();
     }, [setMenuOpen, menuOpen]);
     
     return (

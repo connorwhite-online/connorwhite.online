@@ -15,14 +15,14 @@
 .menu {
     z-index: 100;
     position: absolute;
-    /* height: 10vh; */
     background-color: transparent;
 }
 
 .navbar {
     display: flex;
     width: 95vw;
-    padding: 2.5vw;
+    height: auto;
+    margin: 2.5vw;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
@@ -49,7 +49,7 @@
 
 .nav-link {
     font-family: 'Telegraf-Regular';
-    font-size: 10vw;
+    font-size: 6vw;
     color: var(--color-light);
     text-align: start;
     text-decoration: none;
@@ -58,7 +58,6 @@
 
 .dropdown {
     display: none;
-    overflow-y: hidden;
 }
 
 .linkouts {
@@ -66,9 +65,10 @@
 }
 
 .social-links {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 5vw;
+    cursor: pointer;
 }
 
 @media (min-width: 720px) {
@@ -88,10 +88,7 @@
         align-items: end;
     }
     .social-links {
-        width: 25px;
-        height: 25px;
         margin-left: 1vw;
         margin-right: 0;
-        cursor: pointer;
     }
 }
