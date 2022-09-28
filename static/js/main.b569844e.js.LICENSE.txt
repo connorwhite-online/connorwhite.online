@@ -1,5 +1,5 @@
 /*!
- * GSAP 3.11.1
+ * GSAP 3.11.2
  * https://greensock.com
  *
  * @license Copyright 2008-2022, GreenSock. All rights reserved.
@@ -9,7 +9,7 @@
 */
 
 /*!
- * Observer 3.11.1
+ * Observer 3.11.2
  * https://greensock.com
  *
  * @license Copyright 2008-2022, GreenSock. All rights reserved.
@@ -19,7 +19,7 @@
 */
 
 /*!
- * ScrollTrigger 3.11.1
+ * ScrollTrigger 3.11.2
  * https://greensock.com
  *
  * @license Copyright 2008-2022, GreenSock. All rights reserved.
@@ -29,7 +29,7 @@
 */
 
 /*!
- * TextPlugin 3.11.1
+ * TextPlugin 3.11.2
  * https://greensock.com
  *
  * @license Copyright 2008-2022, GreenSock. All rights reserved.
