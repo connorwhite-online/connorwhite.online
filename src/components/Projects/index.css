@@ -30,7 +30,11 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    padding-top: 10vh;
+    padding-top: 15vh;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
 }
 
 .minimap {
@@ -44,7 +48,7 @@
 /* Individual Project Container */
 .project {
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,7 +96,7 @@
     color: var(--color-light);
     font-family: 'Telegraf-Regular';
     font-size: 4vw;
-    width: 75%;
+    width: 90%;
     margin-bottom: 10px;
 }
 
@@ -135,6 +139,7 @@
     }
     .project-bio {
         font-size: 1.75vw;
+        width: 75%;
     }
     .project-link {
         font-size: 1.5vw;
