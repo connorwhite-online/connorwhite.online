@@ -1,16 +1,25 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Canvas } from '@react-three/fiber';
 
 // View imports
 import Intro from './components/Intro/index';
+<<<<<<< HEAD
 import Model from './components/Model/index';
 import { OrbitControls } from '@react-three/drei';
 import Gallery from './components/Gallery/index';
+=======
+import Menu from './components/Menu/index';
+import Projects from './components/Projects/index';
+import Contact from './components/Contact/index';
+// import NotFound from './components/NotFound/index';
+
+>>>>>>> develop
 
 function App() {
   return (
     <div id='app'>
+<<<<<<< HEAD
       <div id='dommy'>
         <Intro />
       </div>
@@ -32,6 +41,15 @@ function App() {
         <Gallery />
       </div>
       
+=======
+      <Menu />
+      <Routes>
+        <Route path='/' element={<Intro />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element ={<Contact />} />
+        {/* <Route path='*' element={<NotFound />} /> */}
+      </Routes>
+>>>>>>> develop
     </div>
   );
 }

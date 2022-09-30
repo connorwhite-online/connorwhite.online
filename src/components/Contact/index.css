@@ -1,0 +1,52 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Telegraf-Ultralight';
+    src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2);
+}
+@font-face {
+    font-family: 'Telegraf-Regular';
+    src: url(../../assets/fonts/PPTelegraf-Regular.woff2);
+}
+
+:root {
+    --color-light: #fffff0;
+    --color-dark: #000000;
+}
+
+.contact {
+    width: 95vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5vw;
+    padding-top: 7.5vh;
+}
+
+.contact-text {
+    color: var(--color-light);
+    font-family: 'Telegraf-Regular';
+    font-size: 5vw;
+    margin-bottom: 20px;
+}
+
+.email-link {
+    color: var(--color-light);
+    font-family: 'Telegraf-Ultralight';
+    font-size: 5vw;
+    text-decoration: none;
+}
+
+@media (min-width: 720px) {
+    .contact-text {
+        font-size: 2.5vw;
+        width: 75vw;
+    }
+    .email-link {
+        font-size: 2.5vw;
+    }
+}

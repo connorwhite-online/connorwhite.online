@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Telegraf-Ultralight';
+    src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2);
+}
+
+@font-face {
+    font-family: 'Telegraf-Regular';
+    src: url(../../assets/fonts/PPTelegraf-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'Telegraf-Bold';
+    src: url(../../assets/fonts/PPTelegraf-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'Hatton-Light';
+    src: url(../../assets/fonts/PPHatton-Light.woff2);
+}
+
+:root {
+    --color-light: #fffff0;
+    --color-dark: #000000;
+}
+
+.intro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+}
+
+.webgl {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.dom {
+    position: absolute;
+    z-index: 20;
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.bio {
+    width: 75%;
+    font-family: "Telegraf-Regular";
+    font-size: 5vw;
+    color: var(--color-light);
+    line-height: 1.2;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.hl {
+    font-family: "Hatton-Light";
+}
+
+@media (min-width: 720px) {
+    .bio {
+        font-size: 3vw;
+    }
+}
